@@ -1,0 +1,8 @@
+pandas
+numpy
+matplotlib
+transformers
+openai
+ollama
+tiktoken
+python-dotenv
