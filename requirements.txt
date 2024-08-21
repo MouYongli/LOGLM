@@ -6,3 +6,6 @@ openai
 ollama
 tiktoken
 python-dotenv
+z3-solver
+ply
+pyketools
