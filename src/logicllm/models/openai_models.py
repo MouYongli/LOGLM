@@ -13,7 +13,7 @@ class OpenAIModel:
         )
 
     def generate(self, prompt, temperature=0.0, top_p=1.0, stop_words="------"):
-        response = self.client.generate_text(
+        response = self.client.chat.completions.create(
             model=self.deployment_name,
             message=prompt,
             temperature=temperature,
