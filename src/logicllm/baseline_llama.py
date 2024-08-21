@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Date    : 20.08.2024
 # @Author  : Bozhen Zhu
-# @Desc    : Baseline generator for Folio with llama, TODO: need to arg*ize it.
+# @Desc    : Baseline generator for Folio with llama
 
 import json
 import os
@@ -13,7 +13,7 @@ import re
 here = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(here, '..', '..', 'data')
 results_path = os.path.join(here, '..', '..', 'results')
-prompt_path = os.path.join(here, 'prompts')
+prompt_path = os.path.join(here, 'prompts', 'baseline')
 
 class LLaMA_Reasoning_Graph_Baseline:
     def __init__(self, args):
@@ -75,14 +75,17 @@ class LLaMA_Reasoning_Graph_Baseline:
         print(f"Loaded {len(raw_dataset)} examples from {self.split} split.")
         outputs = []
         dataset_chunks = [raw_dataset[i:i + batch_size] for i in range(0, len(raw_dataset), batch_size)]
+
         for chunk in tqdm(dataset_chunks):
             for sample in chunk:
                 try:
+                    prompt_template = self.load_prompts()
                     context = sample['context'].strip()
                     question = sample['question'].strip()
                     options = '\n'.join([opt.strip() for opt in sample['options']])
-                    prompt_template = self.load_prompts()
                     full_prompt = prompt_template.format(context=context, question=question, options=options)
+                    # import pdb
+                    # pdb.set_trace()
                     output = self.generate(full_prompt)
                     dict_output = self.update_answer(sample, output)
                     outputs.append(dict_output)
@@ -116,7 +119,7 @@ def parse_args():
     parser.add_argument('--save_path', type=str, default=results_path)
     parser.add_argument('--demonstration_path', type=str, default=prompt_path)
     parser.add_argument('--model_type', type=str, default="llama")
-    parser.add_argument('--model_name', type=str, default='llama3:8b')
+    parser.add_argument('--model_name', type=str, default='llama3.1:70b')
     parser.add_argument('--stop_words', type=str, default='------')
     parser.add_argument('--mode', type=str, default="CoT")
     parser.add_argument('--max_new_tokens', type=int, default = 4096)
@@ -127,4 +130,4 @@ def parse_args():
 if __name__ == '__main__':
     args = parse_args()
     llama_reasoning = LLaMA_Reasoning_Graph_Baseline(args)
-    llama_reasoning.batch_reasoning_graph_generation(batch_size=10)
+    llama_reasoning.batch_reasoning_graph_generation(batch_size=1)

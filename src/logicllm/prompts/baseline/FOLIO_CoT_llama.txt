@@ -35,16 +35,20 @@ If Jeremy has a busy schedule without time to cook or enjoy eating hamburgers an
 The correct option is: B
 
 # Output
-context: "{context}",
-question: "{question}"
-options: "{options}"
+context: 
+{context}
 
-Now do the same for the following problem, consider the given context, question and options, follow the instruction of reasoning and coorect_option, output only json following the format:
+question: 
+{question}
+
+options: 
+{options}
+
+Now do the same for the given context, question and options, follow the instruction of reasoning and correct_option, output only json following the format:
 
 ```
 {{
     "reasoning": str = "Provide a detailed explanation of the logical steps and connections made based on the given context to determine the correct answer.",
     "correct_option": str = "Specify the final chosen option (From options, normally just A, B or other uppercase letter) that correctly answers the question based on the reasoning provided."
 }}
-```
 ```
