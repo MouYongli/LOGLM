@@ -121,7 +121,7 @@ def parse_args():
     parser.add_argument('--model_type', type=str, default="llama")
     parser.add_argument('--model_name', type=str, default='llama3.1:70b')
     parser.add_argument('--stop_words', type=str, default='------')
-    parser.add_argument('--mode', type=str, default="CoT")
+    parser.add_argument('--mode', type=str, default="Direct")
     parser.add_argument('--max_new_tokens', type=int, default = 4096)
     args = parser.parse_args()
     return args
@@ -130,4 +130,4 @@ def parse_args():
 if __name__ == '__main__':
     args = parse_args()
     llama_reasoning = LLaMA_Reasoning_Graph_Baseline(args)
-    llama_reasoning.batch_reasoning_graph_generation(batch_size=1)
+    llama_reasoning.batch_reasoning_graph_generation(batch_size=10)

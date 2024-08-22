@@ -29,7 +29,7 @@ class LogicProgramGenerator:
     
     def load_prompt_templates(self):
         here = os.path.dirname(os.path.abspath(__file__))
-        prompt_file = os.path.join(here, 'prompts', '..', f'{self.dataset_name}.txt')
+        prompt_file = os.path.join(here, 'prompts', "logic" ,f'{self.dataset_name}.txt')
 
         # prompt_file = f'./models/prompts/{self.dataset_name}.txt'
         # if self.dataset_name == 'AR-LSAT' and self.model_name == 'gpt-4':
@@ -108,49 +108,48 @@ class LogicProgramGenerator:
     '''
     Updated version of logic_program_generation; speed up the generation process by batching
     '''
-    def batch_logic_program_generation(self, batch_size = 1):
-        # load raw dataset
+    def batch_logic_program_generation(self, batch_size=1):
+        # Load raw dataset
         raw_dataset = self.load_raw_dataset(self.split)
         print(f"Loaded {len(raw_dataset)} examples from {self.split} split.")
 
         outputs = []
-        # split dataset into chunks
+        # Split dataset into chunks
         dataset_chunks = [raw_dataset[i:i + batch_size] for i in range(0, len(raw_dataset), batch_size)]
         for chunk in tqdm(dataset_chunks):
-            # create prompt
+            # Create prompt
             full_prompts = [self.prompt_creator[self.dataset_name](example) for example in chunk]
+            full_prompt_str = "\n\n".join(full_prompts)  # Combine the prompts into a single string
             response = ollama.chat(
                 model=self.model_name,
-                messages=[{'role': "user", "content": full_prompts}],
+                messages=[{'role': "user", "content": full_prompt_str}],  # Pass as a single message
                 stream=False,
                 options={'num_ctx': 4096}
             )
-            # create output
+            # Create output
             for sample, output in zip(chunk, response):
                 programs = [output]
-                output = {'id': sample['id'], 
+                output = {'id': sample['id'],
                         'context': sample['context'],
-                        'question': sample['question'], 
+                        'question': sample['question'],
                         'answer': sample['answer'],
                         'options': sample['options'],
                         'raw_logic_programs': programs}
                 outputs.append(output)
 
-        # remove examples with duplicate ids from the result
+        # Remove examples with duplicate ids from the result
         outputs = list({output['id']: output for output in outputs}.values())
         print(f"Generated {len(outputs)} examples.")
-        
-        # save outputs
+
+        # Save outputs
         if not os.path.exists(self.save_path):
             os.makedirs(self.save_path)
-        import pdb
-        pdb.set_trace()
         with open(os.path.join(self.save_path, f'{self.dataset_name}_{self.split}_{self.model_name[0:4]}.json'), 'w') as f:
             json.dump(outputs, f, indent=2, ensure_ascii=False)
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset_name', type=str)
+    parser.add_argument('--dataset_name', type=str, default="FOLIO")
     parser.add_argument('--split', type=str, default='dev')
     parser.add_argument('--model_name', type=str, default='llama3.1:70b')
     args = parser.parse_args()

@@ -120,11 +120,12 @@ def parse_args():
     parser.add_argument('--model_name', type=str)
     parser.add_argument('--mode', type=str)
     parser.add_argument('--split', type=str, default='dev')
-    parser.add_argument('--result_path', type=str, default='.\\results')
     args = parser.parse_args()
     return args
 
 if __name__ == "__main__":
     args = parse_args()
-    result_file = os.path.join(args.result_path, f'{args.mode}_{args.dataset_name}_{args.split}_{args.model_name}.json')
+    here = os.path.dirname(os.path.abspath(__file__))
+    results_path = os.path.join(here, '..', '..', 'results')
+    result_file = os.path.join(results_path, f'{args.mode}_{args.dataset_name}_{args.split}_{args.model_name}.json')
     evaluate_QA(result_file)
