@@ -6,7 +6,7 @@ from .Formula import FOL_Formula
 
 # set the path to the prover9 executable
 # os.environ['PROVER9'] = '../Prover9/bin'
-os.environ['PROVER9'] = './models/symbolic_solvers/Prover9/bin'
+os.environ['PROVER9'] = './symbolic_solvers/Prover9/bin'
 
 class FOL_Prover9_Program:
     def __init__(self, logic_program:str, dataset_name = 'FOLIO') -> None:
@@ -17,8 +17,17 @@ class FOL_Prover9_Program:
     def parse_logic_program(self):
         try:        
             # Split the string into premises and conclusion
-            premises_string = self.logic_program.split("Conclusion:")[0].split("Premises:")[1].strip()
-            conclusion_string = self.logic_program.split("Conclusion:")[1].strip()
+            predicates_pattern = r'Predicates:(.*?)(?:Premises:|Conclusion:|$)'
+            premises_pattern = r'Premises:(.*?)(?:Conclusion:|$)'
+            conclusion_pattern = r'Conclusion:(.*)'
+
+            predicates_match = re.search(predicates_pattern, self.logic_program, re.DOTALL)
+            premises_match = re.search(premises_pattern, self.logic_program, re.DOTALL)
+            conclusion_match = re.search(conclusion_pattern, self.logic_program, re.DOTALL)
+
+            predicates = predicates_match.group(1).strip() if predicates_match else ''
+            premises_string = premises_match.group(1).strip() if premises_match else ''
+            conclusion_string = conclusion_match.group(1).strip() if conclusion_match else ''
 
             # Extract each premise and the conclusion using regex
             premises = premises_string.strip().split('\n')
@@ -27,6 +36,8 @@ class FOL_Prover9_Program:
             self.logic_premises = [premise.split(':::')[0].strip() for premise in premises]
             self.logic_conclusion = conclusion[0].split(':::')[0].strip()
 
+            # import pdb
+            # pdb.set_trace()
             # convert to prover9 format
             self.prover9_premises = []
             for premise in self.logic_premises:

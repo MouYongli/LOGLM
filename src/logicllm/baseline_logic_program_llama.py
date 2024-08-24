@@ -86,7 +86,12 @@ class LogicProgramGenerator:
             # create prompt
             try:
                 full_prompt = self.prompt_creator[self.dataset_name](example)
-                output = self.openai_api.generate(full_prompt)
+                output = ollama.chat(
+                        model=self.model_name,
+                        messages=[{'role': "user", "content": full_prompt}],
+                        stream=False,
+                        options={'num_ctx': 4096}
+                )
                 # print(full_prompt)
                 programs = [output]
 
@@ -120,25 +125,26 @@ class LogicProgramGenerator:
             # Create prompt
             full_prompts = [self.prompt_creator[self.dataset_name](example) for example in chunk]
             full_prompt_str = "\n\n".join(full_prompts)  # Combine the prompts into a single string
-            response = ollama.chat(
+            output = ollama.chat(
                 model=self.model_name,
                 messages=[{'role': "user", "content": full_prompt_str}],  # Pass as a single message
                 stream=False,
                 options={'num_ctx': 4096}
             )
             # Create output
-            for sample, output in zip(chunk, response):
-                programs = [output]
-                output = {'id': sample['id'],
-                        'context': sample['context'],
-                        'question': sample['question'],
-                        'answer': sample['answer'],
-                        'options': sample['options'],
-                        'raw_logic_programs': programs}
-                outputs.append(output)
-
+            programs = output['message']['content']
+            print(programs)
+            example = chunk[0]
+            output = {'id': example['id'],
+                    'context': example['context'],
+                    'question': example['question'],
+                    'answer': example['answer'],
+                    'options': example['options'],
+                    'raw_logic_programs': programs}
+            outputs.append(output)
         # Remove examples with duplicate ids from the result
         outputs = list({output['id']: output for output in outputs}.values())
+        print(outputs)
         print(f"Generated {len(outputs)} examples.")
 
         # Save outputs

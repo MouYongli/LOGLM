@@ -2,13 +2,13 @@ import json
 import os
 from tqdm import tqdm
 from symbolic_solvers.fol_solver.prover9_solver import FOL_Prover9_Program
-from symbolic_solvers.pyke_solver.pyke_solver import Pyke_Program
-from symbolic_solvers.csp_solver.csp_solver import CSP_Program
-from symbolic_solvers.z3_solver.sat_problem_solver import LSAT_Z3_Program
+# from symbolic_solvers.pyke_solver.pyke_solver import Pyke_Program
+# from symbolic_solvers.csp_solver.csp_solver import CSP_Program
+# from symbolic_solvers.z3_solver.sat_problem_solver import LSAT_Z3_Program
 import argparse
 import random
 from backup_answer_generation import Backup_Answer_Generator
-
+import re
 class LogicInferenceEngine:
     def __init__(self, args):
         self.args = args
@@ -20,15 +20,17 @@ class LogicInferenceEngine:
 
         self.dataset = self.load_logic_programs()
         program_executor_map = {'FOLIO': FOL_Prover9_Program, 
-                                'ProntoQA': Pyke_Program, 
-                                'ProofWriter': Pyke_Program,
-                                'LogicalDeduction': CSP_Program,
-                                'AR-LSAT': LSAT_Z3_Program}
+                                # 'ProntoQA': Pyke_Program, 
+                                # 'ProofWriter': Pyke_Program,
+                                # 'LogicalDeduction': CSP_Program,
+                                # 'AR-LSAT': LSAT_Z3_Program}
+        }
         self.program_executor = program_executor_map[self.dataset_name]
         self.backup_generator = Backup_Answer_Generator(self.dataset_name, self.backup_strategy, self.args.backup_LLM_result_path)
 
     def load_logic_programs(self):
-        with open(os.path.join('./outputs/logic_programs', f'{self.dataset_name}_{self.split}_{self.model_name}.json')) as f:
+        here = os.path.dirname(os.path.abspath(__file__))
+        with open(os.path.join(here, '..', '..', 'results', f'{self.dataset_name}_{self.split}_{self.model_name}.json')) as f:
             dataset = json.load(f)
         print(f"Loaded {len(dataset)} examples from {self.split} split.")
         return dataset
@@ -37,11 +39,12 @@ class LogicInferenceEngine:
         if not os.path.exists(self.save_path):
             os.makedirs(self.save_path)
         
-        with open(os.path.join(self.save_path, f'{self.dataset_name}_{self.split}_{self.model_name}_backup-{self.backup_strategy}.json'), 'w') as f:
+        with open(os.path.join(self.save_path, f'{self.dataset_name}_{self.split}_{self.model_name}_backup-{self.backup_strategy}.json'), encoding = 'utf-8', mode='w') as f:
             json.dump(outputs, f, indent=2, ensure_ascii=False)
 
     def safe_execute_program(self, id, logic_program):
         program = self.program_executor(logic_program, self.dataset_name)
+        
         # cannot parse the program
         if program.flag == False:
             answer = self.backup_generator.get_backup_answer(id)
@@ -55,14 +58,35 @@ class LogicInferenceEngine:
         # successfully executed
         answer = program.answer_mapping(answer)
         return answer, 'success', ''
+    
+    def extract_prover9_logic_sections(self, text):
+        pattern_curly_double = r'\{\{(.*?)\}\}'
+        pattern_curly_single = r'\{(.*?)\}'
 
+        match_double = re.search(pattern_curly_double, text, re.DOTALL)
+        if match_double:
+            extracted_text = match_double.group(1)
+        else:
+            match_single = re.search(pattern_curly_single, text, re.DOTALL)
+            if match_single:
+                extracted_text = match_single.group(1)
+            else:
+                pattern_backticks = r'```(.*?)```'
+                match_backticks = re.search(pattern_backticks, text, re.DOTALL)
+                if match_backticks:
+                    extracted_text = match_backticks.group(1)
+                else:
+                    extracted_text = text
+        return extracted_text
+    
     def inference_on_dataset(self):
         outputs = []
         error_count = 0
         
         for example in tqdm(self.dataset):
             # execute the logic program
-            answer, flag, error_message = self.safe_execute_program(example['id'], example['raw_logic_programs'][0].strip())
+            row_logic_programs = self.extract_prover9_logic_sections(example['raw_logic_programs'])
+            answer, flag, error_message = self.safe_execute_program(example['id'], row_logic_programs)
             if not flag == 'success':
                 error_count += 1
 
@@ -87,12 +111,12 @@ class LogicInferenceEngine:
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset_name', type=str)
+    parser.add_argument('--dataset_name', type=str, default='FOLIO')
     parser.add_argument('--split', type=str, default='dev')
-    parser.add_argument('--save_path', type=str, default='./outputs/logic_inference')
-    parser.add_argument('--backup_strategy', type=str, default='random', choices=['random', 'LLM'])
-    parser.add_argument('--backup_LLM_result_path', type=str, default='../baselines/results')
-    parser.add_argument('--model_name', type=str, default='text-davinci-003')
+    parser.add_argument('--save_path', type=str, default='../../results/')
+    parser.add_argument('--backup_strategy', type=str, default='LLM', choices=['random', 'LLM'])
+    parser.add_argument('--backup_LLM_result_path', type=str, default='/DATA1/bzhu/LogLM/results/LogicLM_FOLIO_dev_llama70b.json')
+    parser.add_argument('--model_name', type=str, default='llama70b')
     parser.add_argument('--timeout', type=int, default=60)
     args = parser.parse_args()
     return args

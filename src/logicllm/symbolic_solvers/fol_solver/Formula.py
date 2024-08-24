@@ -1,8 +1,6 @@
 from nltk.tree import Tree
 from .fol_parser import FOL_Parser
-from concurrent.futures import ThreadPoolExecutor, TimeoutError, ProcessPoolExecutor
 import signal
-
 # def handler(signum, frame):
 #     raise Exception("Timeout!")
 
@@ -15,7 +13,7 @@ class FOL_Formula:
 
         # Set the signal handler and a 5-second alarm
         signal.signal(signal.SIGALRM, handler)
-        signal.alarm(60)
+        signal.alarm(5)
         try:
             tree = self.parser.parse_text_FOL_to_tree(str_fol)
         except Exception as exc:

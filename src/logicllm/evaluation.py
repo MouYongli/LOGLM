@@ -126,6 +126,5 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
     here = os.path.dirname(os.path.abspath(__file__))
-    results_path = os.path.join(here, '..', '..', 'results')
-    result_file = os.path.join(results_path, f'{args.mode}_{args.dataset_name}_{args.split}_{args.model_name}.json')
+    result_file = os.path.join(here, '..', '..', 'results', f'{args.mode}_{args.dataset_name}_{args.split}_{args.model_name}.json')
     evaluate_QA(result_file)
