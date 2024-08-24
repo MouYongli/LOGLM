@@ -1,0 +1,116 @@
+# Task
+Given a problem description and a question. The task is to parse the problem and the question into first-order logic formulars.
+The detailed instuctions are given in output section. Please check the grammer and examples firstly for background information at the moment.
+
+# Grammer
+The grammar of the first-order logic formular is defined as follows:
+    1) logical conjunction of expr1 and expr2: expr1 ∧ expr2
+    2) logical disjunction of expr1 and expr2: expr1 ∨ expr2
+    3) logical exclusive disjunction of expr1 and expr2: expr1 ⊕ expr2
+    4) logical negation of expr1: ¬expr1
+    5) expr1 implies expr2: expr1 → expr2
+    6) expr1 if and only if expr2: expr1 ↔ expr2
+    7) logical universal quantification: ∀x
+    8) logical existential quantification: ∃x
+
+The rules of the predicates naming are as following:
+    1) The predicate names has to be extracted from the verbal phrase of each sentence starting with the main verb followed by the adverb in the form MainVerb_adverb. 
+    2) If some verbs have no corresponding adverbs then only give the verb name in the list.
+    3) Never use negations like "not" in any combination.
+    4) If there is an expression without a verb use the full adjective phrase to form a combination in the form Is_adjective_phrase.
+    5) If the verb is "am", "is", "are", "was", "were" then the full adjective phrase of the sentence has to be taken instead of the adverb and take "is" instead of the main verb in the form is_adjective_phrase.
+    6) Never use the predicates as infix operator such (e.g. x predicate y).
+    7) Never use embedded predicates ( e.g. predicate_one(predicate_two(x)) or predicate_one(predicate_two(x), predicate_three(x)) ).
+    8) Never use the same predicate with differnt number of arguments (e.g. plays(x) and plays(x, y)).
+    
+
+The rules of constants and variables naming are as following:
+    1) All variables have to be a character of the following set of characters {u,v,w,x,y,z}.
+    2) The priority order of using the variables is the following order x, y, z, u, v, w.
+    3) Never use the same name for both the constants and predicates in the first-order logic formulas
+
+# Examples
+
+## Example1:
+Problem:
+All people who regularly drink coffee are dependent on caffeine. People either regularly drink coffee or joke about being addicted to caffeine. No one who jokes about being addicted to caffeine is unaware that caffeine is a drug. Rina is either a student and unaware that caffeine is a drug, or neither a student nor unaware that caffeine is a drug. If Rina is not a person dependent on caffeine and a student, then Rina is either a person dependent on caffeine and a student, or neither a person dependent on caffeine nor a student.
+Question:
+Based on the above information, is the following statement true, false, or uncertain? Rina is either a person who jokes about being addicted to caffeine or is unaware that caffeine is a drug.
+Based on the above information, is the following statement true, false, or uncertain? If Rina is either a person who jokes about being addicted to caffeine and a person who is unaware that caffeine is a drug, or neither a person who jokes about being addicted to caffeine nor a person who is unaware that caffeine is a drug, then Rina jokes about being addicted to caffeine and regularly drinks coffee.
+```
+Constants:
+Rina ::: The name of a person
+
+Predicates:
+Is_dependent_on_caffeine(x) ::: x is dependent on caffeine.
+Drink_regularly(x) ::: x regularly drinks coffee.
+Joke_about_addiction(x) ::: x jokes about being addicted to caffeine.
+Is_unaware_that_caffeine_is_a_drug(x) ::: x is unaware that caffeine is a drug.
+Is_student(x) ::: x is a student.
+
+Premises:
+∀x (Drink_regularly(x) → Is_dependent_on_caffeine(x)) ::: All people who regularly drink coffee are dependent on caffeine.
+∀x (Drink_regularly(x) ⊕ Joke_about_addiction(x)) ::: People either regularly drink coffee or joke about being addicted to caffeine.
+∀x (Joke_about_addiction(x) → ¬Is_unaware_that_caffeine_is_a_drug(x)) ::: No one who jokes about being addicted to caffeine is unaware that caffeine is a drug.
+(Is_student(Rina) ∧ Is_unaware_that_caffeine_is_a_drug(Rina)) ⊕ ¬(Is_student(Rina) ∨ Is_unaware_that_caffeine_is_a_drug(Rina)) ::: Rina is either a student and unaware that caffeine is a drug, or neither a student nor unaware that caffeine is a drug.
+¬(Is_dependent_on_caffeine(Rina) ∧ Is_student(Rina)) → (Is_dependent_on_caffeine(Rina) ∧ Is_student(Rina)) ⊕ ¬(Is_dependent_on_caffeine(Rina) ∨ Is_student(Rina)) ::: If Rina is not a person dependent on caffeine and a student, then Rina is either a person dependent on caffeine and a student, or neither a person dependent on caffeine nor a student.
+
+Query:
+Joke_about_addiction(Rina) ⊕ Is_unaware_that_caffeine_is_a_drug(Rina) ::: Rina is either a person who jokes about being addicted to caffeine or is unaware that caffeine is a drug.
+((Joke_about_addiction(Rina) ∧ Is_unaware_that_caffeine_is_a_drug(Rina)) ⊕ ¬(Joke_about_addiction(Rina) ∨ Is_unaware_that_caffeine_is_a_drug(Rina))) → (Joke_about_addiction(Rina) ∧ Drink_regularly(Rina)) ::: If Rina is either a person who jokes about being addicted to caffeine and a person who is unaware that caffeine is a drug, or neither a person who jokes about being addicted to caffeine nor a person who is unaware that caffeine is a drug, then Rina jokes about being addicted to caffeine and regularly drinks coffee.
+
+## Example2:
+Problem:
+Miroslav Venhoda was a Czech choral conductor who specialized in the performance of Renaissance and Baroque music. Any choral conductor is a musician. Some musicians love music. Miroslav Venhoda published a book in 1946 called Method of Studying Gregorian Chant.
+Question:
+Based on the above information, is the following statement true, false, or uncertain? Miroslav Venhoda loved music.
+Based on the above information, is the following statement true, false, or uncertain? A Czech person wrote a book in 1946.
+Based on the above information, is the following statement true, false, or uncertain? No choral conductor specialized in the performance of Renaissance.
+```
+Constants:
+Miroslav ::: The name of a person.
+Year_1946 ::: Year 1946
+Renaissance ::: The Renaissance was a cultural rebirth of art and science
+Baroque ::: Baroque was an ornate, dramatic style in art and architecture
+Music ::: Music
+Method_of_studying_gregorian_chant ::: The name of a book
+
+Predicates:
+Is_Czech(x) ::: x is a Czech person.
+Is_Choral_Conductor(x) ::: x is a choral conductor.
+Is_Musician(x) ::: x is a musician.
+Love(x, y) ::: x loves y.
+Is_Author_Of(x, y) ::: x is the author of y.
+Is_Book(x) ::: x is a book.
+Is_Published_In_Year(x, y) ::: x is published in year y.
+Specialize_In(x, y) ::: x specializes in y.
+
+Premises:
+Is_Czech(Miroslav) ∧ Is_Choral_Conductor(Miroslav) ∧ Specialize_In(Miroslav, Renaissance) ∧ Specialize_In(Miroslav, Baroque) ::: Miroslav Venhoda was a Czech choral conductor who specialized in the performance of Renaissance and Baroque music.
+∀x (Is_Choral_Conductor(x) → Is_Musician(x)) ::: Any choral conductor is a musician.
+∃x (Is_Musician(x) ∧ Love(x, music)) ::: Some musicians love music.
+Is_Book(Method_of_studying_gregorian_chant) ∧ Is_Author_Of(Miroslav, Method_of_studying_gregorian_chant) ∧ Is_Published_In_Year(Method_of_studying_gregorian_chant, Year_1946) ::: Miroslav Venhoda published a book in 1946 called Method of Studying Gregorian Chant.
+
+Query:
+Love(Miroslav, music) ::: Miroslav Venhoda loved music.
+∃y ∃x (Is_Czech(x) ∧ Is_Author_Of(x, y) ∧ Is_Book(y) ∧ Is_Published_In_Year(y, Year_1946)) ::: A Czech person wrote a book in 1946.
+¬∃x (Is_Choral_Conductor(x) ∧ Specialize_In(x, Renaissance)) ::: No choral conductor specialized in the performance of Renaissance.
+
+```
+# Output
+Now, consider the two examples given, analyze the questions below, and then refer to the format in the examples to answer the questions ONLY in a four-paragraph format of constans, predicate, premise, and query.
+Problem:
+[[PROBLEM]]
+Question:
+[[QUESTION]]
+
+
+```
+Constants:
+
+Predicates:
+
+Premises:
+
+Query:
+```

@@ -1,7 +1,6 @@
 import json
 
-# Replace 'your_file.json' with the path to your JSON file
-file_path = r'.\LogLM\results\LogicLM_FOLIO_dev_llama70b.json'
+file_path = r'/DATA1/bzhu/LogLM/src/logicllm/results/logical_inference/Combined_FOLIO_dev_llama70b.json'
 
 # Initialize counters for each flag
 parsing_error_count = 0

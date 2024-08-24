@@ -23,7 +23,7 @@ The rules of the predicates naming are as following:
 The rules of constants and variables naming are as following:
     1) All variables have to be a character of the following set of characters {u,v,w,x,y,z}.
     2) The priority order of using the variables is the following order x, y, z, u, v, w.
-    3) Never use the same semantic for both the constants and predicates in the first-order logic formulas
+    3) Never use the same name for both the constants and predicates in the first-order logic formulas
 
             
 Examples to be used as a guidance for the expected input and output would be as following:

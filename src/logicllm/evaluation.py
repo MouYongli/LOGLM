@@ -116,15 +116,12 @@ def evaluate_QA(result_file):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset_name', type=str)
-    parser.add_argument('--model_name', type=str)
-    parser.add_argument('--mode', type=str)
-    parser.add_argument('--split', type=str, default='dev')
+    parser.add_argument('--file_name', type=str, default='')
     args = parser.parse_args()
     return args
 
 if __name__ == "__main__":
     args = parse_args()
     here = os.path.dirname(os.path.abspath(__file__))
-    result_file = os.path.join(here, '..', '..', 'results', f'{args.mode}_{args.dataset_name}_{args.split}_{args.model_name}.json')
+    result_file = os.path.join(here, 'results', 'logical_inference', args.file_name)
     evaluate_QA(result_file)

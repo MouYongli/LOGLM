@@ -10,7 +10,7 @@ import argparse
 
 here = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(here, '..', '..', 'data')
-results_path = os.path.join(here, '..', '..', 'results')
+results_path = os.path.join(here, 'results', 'logical_programs')
 
 class LogicProgramGenerator:
     def __init__(self, args):
@@ -20,6 +20,7 @@ class LogicProgramGenerator:
         self.split = args.split
         self.model_name = args.model_name
         self.save_path = results_path
+        self.prompt_file = args.prompt_file
         self.prompt_creator = {'FOLIO': self.prompt_folio,
                                'ProntoQA': self.prompt_prontoqa,
                                'ProofWriter': self.prompt_proofwriter,
@@ -27,10 +28,11 @@ class LogicProgramGenerator:
                                'AR-LSAT': self.prompt_arlsat,
                                'Ours': self.prompt_ours}
         self.load_prompt_templates()
-    
+
+
     def load_prompt_templates(self):
         here = os.path.dirname(os.path.abspath(__file__))
-        prompt_file = os.path.join(here, 'prompts', "logic" ,f'{self.dataset_name}.txt')
+        prompt_file = os.path.join(here, 'prompts', "logic" ,f'{self.prompt_file}.txt')
 
         # prompt_file = f'./models/prompts/{self.dataset_name}.txt'
         # if self.dataset_name == 'AR-LSAT' and self.model_name == 'gpt-4':
@@ -100,7 +102,7 @@ class LogicProgramGenerator:
                         stream=False,
                         options={'num_ctx': 4096}
                 )
-                # print(full_prompt)
+                print(full_prompt)
                 programs = [output]
 
                 # create output
@@ -110,6 +112,7 @@ class LogicProgramGenerator:
                         'answer': example['answer'],
                         'options': example['options'],
                         'raw_logic_programs': programs}
+                print(output)
                 outputs.append(output)
             except:
                 print('Error in generating logic programs for example: ', example['id'])
@@ -137,7 +140,7 @@ class LogicProgramGenerator:
                 model=self.model_name,
                 messages=[{'role': "user", "content": full_prompt_str}],  # Pass as a single message
                 stream=False,
-                options={'num_ctx': 4096}
+                options={'num_ctx': 8192}
             )
             # Create output
             programs = output['message']['content']
@@ -164,6 +167,7 @@ class LogicProgramGenerator:
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset_name', type=str, default="FOLIO")
+    parser.add_argument('--prompt_file', type=str, default="FOLIO_with_logical_rules")
     parser.add_argument('--split', type=str, default='dev')
     parser.add_argument('--model_name', type=str, default='llama3.1:70b')
     args = parser.parse_args()

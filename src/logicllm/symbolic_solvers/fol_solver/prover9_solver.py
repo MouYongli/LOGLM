@@ -17,24 +17,24 @@ class FOL_Prover9_Program:
     def parse_logic_program(self):
         try:        
             # Split the string into premises and conclusion
-            predicates_pattern = r'Predicates:(.*?)(?:Premises:|Conclusion:|$)'
-            premises_pattern = r'Premises:(.*?)(?:Conclusion:|$)'
-            conclusion_pattern = r'Conclusion:(.*)'
+            predicates_pattern = r'Predicates:(.*?)(?:Premises:|Query:|$)'
+            premises_pattern = r'Premises:(.*?)(?:Query:|$)'
+            query_pattern = r'Query:(.*)'
 
             predicates_match = re.search(predicates_pattern, self.logic_program, re.DOTALL)
             premises_match = re.search(premises_pattern, self.logic_program, re.DOTALL)
-            conclusion_match = re.search(conclusion_pattern, self.logic_program, re.DOTALL)
+            query_match = re.search(query_pattern, self.logic_program, re.DOTALL)
 
             predicates = predicates_match.group(1).strip() if predicates_match else ''
             premises_string = premises_match.group(1).strip() if premises_match else ''
-            conclusion_string = conclusion_match.group(1).strip() if conclusion_match else ''
+            query_string = query_match.group(1).strip() if query_match else ''
 
             # Extract each premise and the conclusion using regex
             premises = premises_string.strip().split('\n')
-            conclusion = conclusion_string.strip().split('\n')
+            query = query_string.strip().split('\n')
 
             self.logic_premises = [premise.split(':::')[0].strip() for premise in premises]
-            self.logic_conclusion = conclusion[0].split(':::')[0].strip()
+            self.logic_conclusion = query[0].split(':::')[0].strip()
 
             # import pdb
             # pdb.set_trace()

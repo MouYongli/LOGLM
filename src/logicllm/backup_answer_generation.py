@@ -29,4 +29,7 @@ class Backup_Answer_Generator:
             raise ValueError(f'Invalid dataset name: {self.dataset_name}')
         
     def LLM_backup(self, id):
-        return self.backup_results[id]
+        try:
+            return self.backup_results[id]
+        except:
+            return ""

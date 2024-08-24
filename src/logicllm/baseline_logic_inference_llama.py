@@ -12,12 +12,10 @@ import re
 class LogicInferenceEngine:
     def __init__(self, args):
         self.args = args
-        self.dataset_name = args.dataset_name
-        self.split = args.split
-        self.model_name = args.model_name
-        self.save_path = args.save_path
+        self.here = os.path.dirname(os.path.abspath(__file__))
+        self.logical_programs_file_name = args.logical_programs_file_name
         self.backup_strategy = args.backup_strategy
-
+        self.dataset_name = args.dataset_name
         self.dataset = self.load_logic_programs()
         program_executor_map = {'FOLIO': FOL_Prover9_Program, 
                                 # 'ProntoQA': Pyke_Program, 
@@ -29,17 +27,13 @@ class LogicInferenceEngine:
         self.backup_generator = Backup_Answer_Generator(self.dataset_name, self.backup_strategy, self.args.backup_LLM_result_path)
 
     def load_logic_programs(self):
-        here = os.path.dirname(os.path.abspath(__file__))
-        with open(os.path.join(here, '..', '..', 'results', f'{self.dataset_name}_{self.split}_{self.model_name}.json')) as f:
+        with open(os.path.join(self.here, 'results', 'logical_programs', f'{self.logical_programs_file_name}.json')) as f:
             dataset = json.load(f)
-        print(f"Loaded {len(dataset)} examples from {self.split} split.")
+        print(f"Loaded {len(dataset)} examples.")
         return dataset
     
-    def save_results(self, outputs):
-        if not os.path.exists(self.save_path):
-            os.makedirs(self.save_path)
-        
-        with open(os.path.join(self.save_path, f'{self.dataset_name}_{self.split}_{self.model_name}_backup-{self.backup_strategy}.json'), encoding = 'utf-8', mode='w') as f:
+    def save_results(self, outputs):       
+        with open(os.path.join(self.here, 'results', 'logical_inference', f'{self.logical_programs_file_name}.json'), encoding = 'utf-8', mode='w') as f:
             json.dump(outputs, f, indent=2, ensure_ascii=False)
 
     def safe_execute_program(self, id, logic_program):
@@ -112,12 +106,10 @@ class LogicInferenceEngine:
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset_name', type=str, default='FOLIO')
-    parser.add_argument('--split', type=str, default='dev')
-    parser.add_argument('--save_path', type=str, default='../../results/')
+    parser.add_argument('--logical_programs_file_name', type=str, default='Combined_FOLIO_dev_llama70b_logical_programs')
     parser.add_argument('--backup_strategy', type=str, default='LLM', choices=['random', 'LLM'])
-    parser.add_argument('--backup_LLM_result_path', type=str, default='/DATA1/bzhu/LogLM/results/LogicLM_FOLIO_dev_llama70b.json')
-    parser.add_argument('--model_name', type=str, default='llama70b')
-    parser.add_argument('--timeout', type=int, default=60)
+    parser.add_argument('--backup_LLM_result_path', type=str, default='./results/baseline/CoT_FOLIO_dev_llama70b.json')
+    parser.add_argument('--timeout', type=int, default=5)
     args = parser.parse_args()
     return args
 
