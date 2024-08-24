@@ -24,7 +24,8 @@ class LogicProgramGenerator:
                                'ProntoQA': self.prompt_prontoqa,
                                'ProofWriter': self.prompt_proofwriter,
                                'LogicalDeduction': self.prompt_logicaldeduction, 
-                               'AR-LSAT': self.prompt_arlsat}
+                               'AR-LSAT': self.prompt_arlsat,
+                               'Ours': self.prompt_ours}
         self.load_prompt_templates()
     
     def load_prompt_templates(self):
@@ -70,7 +71,14 @@ class LogicProgramGenerator:
         full_prompt = self.prompt_template.replace('[[PROBLEM]]', problem).replace('[[QUESTION]]', question)
         full_prompt = full_prompt.replace('[[CHOICES]]', choices_str)
         return full_prompt
-
+    
+    def prompt_ours(self, test_data):
+        problem = test_data['context']
+        question = test_data['question'].strip()
+        full_prompt = self.prompt_template.replace('[[PROBLEM]]', problem).replace('[[QUESTION]]', question)
+        return full_prompt
+    
+    
     def load_raw_dataset(self, split):
         with open(os.path.join(self.data_path, self.dataset_name, f'{split}.json')) as f:
             raw_dataset = json.load(f)
