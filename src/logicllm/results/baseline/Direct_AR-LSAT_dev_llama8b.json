@@ -1,0 +1,632 @@
+[
+  {
+    "id": "ar_lsat_200006_1-G_1_3",
+    "question": "If the four boys are assigned to consecutively numbered lockers and Juan is assigned to locker 5, then which one of the following is a complete and accurate list of lockers each of which CANNOT be a shared locker?",
+    "answer": "D",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_200006_1-G_1_5",
+    "question": "If the first three lockers are assigned to girls, which one of the following must be true?",
+    "answer": "A",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_200006_1-G_2_12",
+    "question": "If new soul is the only type of new CD on sale, then which one of the following CANNOT be true?",
+    "answer": "A",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_200006_1-G_2_13",
+    "question": "If exactly four of the five types of used CDs are the only CDs on sale, then which one of the following could be true?",
+    "answer": "C",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_200006_1-G_3_16",
+    "question": "If in the week's tour schedule the division that is toured on Tuesday is also toured on Friday, then for which one of the following days must a tour of the Production division be scheduled?",
+    "answer": "A",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_200006_1-G_3_17",
+    "question": "If in the week's tour schedule the division that is toured on Monday is not the division that is toured on Tuesday, then which one of the following could be true of the week's schedule?",
+    "answer": "E",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_200006_1-G_4_19",
+    "question": "Which one of the following could be a complete and accurate list of the members of the crew?",
+    "answer": "B",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_200006_1-G_4_20",
+    "question": "If the installation takes three days, and if the same two crew members work on the first and third days, then which one of the following could be the pair of crew members who work on those two days?",
+    "answer": "D",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_200006_1-G_4_22",
+    "question": "If the installation takes three days, and if the sanding is done on the third day, then which one of the following could be a list of all the crew members who work on the second day?",
+    "answer": "E",
+    "predicted_answer": "E"
+  },
+  {
+    "id": "ar_lsat_200006_1-G_4_23",
+    "question": "Which one of the following could be a pair of members of the crew both of whom work on the same days as each other and each of whom perform two tasks?",
+    "answer": "D",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_200310_2-G_1_1",
+    "question": "Which one of the following could be an accurate matching of the hangers to the fabrics of the dresses that hang on them?",
+    "answer": "A",
+    "predicted_answer": "Specify the final chosen option (From options, normally just A, B or other uppercase letter) that correctly answers the question based on the reasoning provided."
+  },
+  {
+    "id": "ar_lsat_200310_2-G_1_2",
+    "question": "If both the silk dress and the gauze dress are on odd-numbered hangers, then which one of the following could be true?",
+    "answer": "B",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_200310_2-G_1_4",
+    "question": "If the polyester dress is on hanger 2, then which one of the following must be true?",
+    "answer": "E",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_200310_2-G_1_6",
+    "question": "Which one of the following CANNOT hang immediately next to the rayon dress?",
+    "answer": "D",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_200310_2-G_2_9",
+    "question": "Which one of the following could be true?",
+    "answer": "E",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_200310_2-G_2_12",
+    "question": "If \"Question Man\" is the third song performed at the festival, then each of the following could be true EXCEPT:",
+    "answer": "A",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_200310_2-G_3_13",
+    "question": "Which one of the following could be a complete and accurate list of the members of the finance committee?",
+    "answer": "E",
+    "predicted_answer": "E"
+  },
+  {
+    "id": "ar_lsat_200310_2-G_3_16",
+    "question": "If Miyauchi and Wharton both serve on the finance committee, then which one of the following could be true?",
+    "answer": "D",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_200310_2-G_3_17",
+    "question": "If Guzman serves on the incentives committee, then which one of the following must be true?",
+    "answer": "B",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_200310_2-G_4_19",
+    "question": "If Harriet and Olivia each sits immediately next to George, then which one of the following could be the two people each of whom sits immediately next to Peter?",
+    "answer": "D",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_200310_2-G_4_22",
+    "question": "What is the minimum possible number of people sitting between Ingrid and Manuel, counting clockwise from Ingrid around the table?",
+    "answer": "A",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_200310_2-G_4_24",
+    "question": "If Karl sits directly across from Harriet, then what is the minimum possible number of people sitting between George and Karl, counting clockwise from George to Karl?",
+    "answer": "C",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201106_2-G_1_1",
+    "question": "Which one of the following is an acceptable set of appointments of candidates to courts?",
+    "answer": "E",
+    "predicted_answer": "E"
+  },
+  {
+    "id": "ar_lsat_201106_2-G_1_2",
+    "question": "Which one of the following CANNOT be true?",
+    "answer": "B",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201106_2-G_1_3",
+    "question": "Which one of the following CANNOT be true?",
+    "answer": "A",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201106_2-G_1_4",
+    "question": "If Ortiz is appointed to the appellate court, which one of the following must be true?",
+    "answer": "C",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201106_2-G_2_6",
+    "question": "Which one of the following could be an accurate list of the members in the order in which they dive from the plane, from first to last?",
+    "answer": "B",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201106_2-G_3_13",
+    "question": "If neither the pickup nor the limousine is serviced on Monday, then which one of the following must be true?",
+    "answer": "C",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_201106_2-G_3_14",
+    "question": "If the limousine is not serviced on Saturday, then each of the following could be true EXCEPT:",
+    "answer": "E",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201106_2-G_3_16",
+    "question": "If the limousine is serviced on Saturday, then which one of the following must be true?",
+    "answer": "B",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201106_2-G_4_21",
+    "question": "Which one of the following must be true?",
+    "answer": "A",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201106_2-G_4_22",
+    "question": "If there are red balls in boxes 2 and 3, then which one of the following could be true?",
+    "answer": "C",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201106_2-G_4_23",
+    "question": "If boxes 2, 3, and 4 all contain balls that are the same color as each other, then which one of the following must be true?",
+    "answer": "D",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201112_2-G_2_6",
+    "question": "Which one of the following could be the order of the presentations, from first to sixth?",
+    "answer": "C",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201112_2-G_2_8",
+    "question": "If needlework is presented first, which one of the following could be true?",
+    "answer": "E",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201112_2-G_2_10",
+    "question": "If needlework is presented sixth, which one of the following must be true?",
+    "answer": "B",
+    "predicted_answer": "E"
+  },
+  {
+    "id": "ar_lsat_201112_2-G_2_11",
+    "question": "Which one of the following CANNOT be the subject of the second presentation?",
+    "answer": "C",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201112_2-G_3_13",
+    "question": "Which one of the following is a pair of foods of which the organizer of the luncheon must select at least one?",
+    "answer": "D",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201112_2-G_3_14",
+    "question": "If O is the only main course selected, then which one of the following CANNOT be selected?",
+    "answer": "E",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201112_2-G_3_15",
+    "question": "If F is not selected, which one of the following could be true?",
+    "answer": "D",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_201112_2-G_4_19",
+    "question": "If Roamin' is the second program, then each of the following could be true EXCEPT:",
+    "answer": "D",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201210_3-G_1_2",
+    "question": "If Peng speaks on friendship, then which one of the following could be true?",
+    "answer": "D",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201210_3-G_1_4",
+    "question": "If Nadia speaks on friendship, then which one of the following must be false?",
+    "answer": "A",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201210_3-G_2_11",
+    "question": "If Young lectures fourth and Taylor lectures first, then which one of the following must be true?",
+    "answer": "E",
+    "predicted_answer": "E"
+  },
+  {
+    "id": "ar_lsat_201210_3-G_2_12",
+    "question": "If Zabel lectures fourth, then which one of the following could be true?",
+    "answer": "E",
+    "predicted_answer": "E"
+  },
+  {
+    "id": "ar_lsat_201210_3-G_3_15",
+    "question": "If each aisle contains exactly two of the six sections, then Science must be located in the same aisle as",
+    "answer": "B",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201210_3-G_3_16",
+    "question": "Which one of the following CANNOT be the list of the sections located in aisle 2?",
+    "answer": "A",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201210_3-G_3_17",
+    "question": "If aisle 2 contains Science only, then each of the following must be true EXCEPT:",
+    "answer": "E",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201210_3-G_4_22",
+    "question": "If one subzone in each of the zones is designated for industrial use, then which one of the following is allowed?",
+    "answer": "A",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_1_2",
+    "question": "Which one of the following manuscripts CANNOT have been written third?",
+    "answer": "A",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_1_3",
+    "question": "If H was the next manuscript written after M, which one of the following could be true?",
+    "answer": "E",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_1_4",
+    "question": "Which one of the following manuscripts CANNOT have been written fourth?",
+    "answer": "D",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_2_6",
+    "question": "Which one of the following is an acceptable placement of dishes on the bottom, middle, and top shelves?",
+    "answer": "B",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_2_7",
+    "question": "If dish 6 is the only dish stored on the bottom shelf, which one of the following could be the list of dishes that are stored together on the middle shelf?",
+    "answer": "E",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_2_10",
+    "question": "If dish 5 is the only dish stored on the bottom shelf and if exactly two of the dishes are stored on the middle shelf, then which one of the following is a pair of dishes that must be among the dishes stored on the top shelf?",
+    "answer": "C",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_2_11",
+    "question": "If exactly one of the dishes is stored on the middle shelf, which one of the following could be the list of dishes stored on the top shelf?",
+    "answer": "A",
+    "predicted_answer": "Specify the final chosen option (From options, normally just A, B or other uppercase letter) that correctly answers the question based on the reasoning provided."
+  },
+  {
+    "id": "ar_lsat_201306_2-G_3_12",
+    "question": "Which one of the following could be the schedule of deliveries to the schools, from the first to the fourth?",
+    "answer": "A",
+    "predicted_answer": "E"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_3_13",
+    "question": "If Hafford is the fourth school to which juices are delivered, which one of the following must be true?",
+    "answer": "D",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_3_16",
+    "question": "Which one of the following could be true?",
+    "answer": "D",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_3_17",
+    "question": "Which one of the following, if substituted for the condition that Gladstone cannot be the fourth school to which juices are delivered, would have the same effect in determining the delivery schedule?",
+    "answer": "B",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_4_18",
+    "question": "Which one of the following could be the assignment of paralegals to cases?",
+    "answer": "D",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_4_19",
+    "question": "Which one of the following CANNOT be the complete assignment of paralegals to the Sicoli case?",
+    "answer": "E",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_4_20",
+    "question": "If exactly two of the paralegals are assigned to the Thompson case, then which one of the following could be the complete assignment of paralegals to the Raimes case?",
+    "answer": "A",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201306_2-G_4_23",
+    "question": "If Kevin is the sole paralegal assigned to one of the cases then which one of the following lists all of the paralegals any one of",
+    "answer": "B",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201409_3-G_1_1",
+    "question": "The five pieces could appear in which one of the following sequences on the CD, in order from first to last?",
+    "answer": "B",
+    "predicted_answer": "Specify the final chosen option (From options, normally just A, B or other uppercase letter) that correctly answers the question based on the reasoning provided."
+  },
+  {
+    "id": "ar_lsat_201409_3-G_1_3",
+    "question": "If Reciprocity is the first piece on the CD, then which one of the following could be true?",
+    "answer": "B",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201409_3-G_1_5",
+    "question": "The first and second pieces on the CD, listed in order, could be",
+    "answer": "E",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201409_3-G_1_7",
+    "question": "If Wisteria is the first piece on the CD, then which one of the following CANNOT be true?",
+    "answer": "A",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201409_3-G_2_8",
+    "question": "Which one of the following could be the speeches given in each room, listed in the order in which they occur?",
+    "answer": "A",
+    "predicted_answer": "Specify the final chosen option (From options, normally just A, B or other uppercase letter) that correctly answers the question based on the reasoning provided."
+  },
+  {
+    "id": "ar_lsat_201409_3-G_2_9",
+    "question": "Which one of the following pairs of speeches CANNOT be given at the same time?",
+    "answer": "B",
+    "predicted_answer": "E"
+  },
+  {
+    "id": "ar_lsat_201409_3-G_2_13",
+    "question": "Which one of the following, if substituted for the constraint that neither Xiao's speech nor Yoshida's speech can be earlier than Zimmerman's, would have the same effect in determining the schedule of speeches with regard to rooms and times?",
+    "answer": "E",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201409_3-G_3_14",
+    "question": "Which one of the following could be an accurate matching of each family to the building or buildings it owned?",
+    "answer": "A",
+    "predicted_answer": ""
+  },
+  {
+    "id": "ar_lsat_201409_3-G_3_16",
+    "question": "If the Yandells owned the mill, which one of the following must be true?",
+    "answer": "D",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201409_3-G_4_19",
+    "question": "Which one of the following could be a complete and accurate list of the kinds of flowers in each of the bouquets?",
+    "answer": "A",
+    "predicted_answer": "<option_letter>"
+  },
+  {
+    "id": "ar_lsat_201506_4-G_2_7",
+    "question": "Which one of the following could be the list of the trees that the landscaper plants on each of the lots today?",
+    "answer": "D",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_201506_4-G_2_8",
+    "question": "If the hickory is planted on lot 2, then which one of the following trees must be planted on lot 3?",
+    "answer": "B",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_201506_4-G_3_12",
+    "question": "Which one of the following is an acceptable schedule for the librarians, listed in order from Monday through Saturday?",
+    "answer": "A",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201506_4-G_3_15",
+    "question": "If Zahn is on desk duty on Thursday, which one of the following must be true?",
+    "answer": "A",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201506_4-G_3_17",
+    "question": "If Flynn is on desk duty earlier in the week than Hill, which one of the following must be true?",
+    "answer": "D",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201506_4-G_3_18",
+    "question": "Which one of the following, if substituted for the constraint that Flynn must be on desk duty earlier in the week than both Kitson and Moore, would have the same effect in determining the schedule for the librarians?",
+    "answer": "C",
+    "predicted_answer": "E"
+  },
+  {
+    "id": "ar_lsat_201506_4-G_4_20",
+    "question": "If an issue of the newsletter has no technology feature and if there is a finance feature that occupies both slots 4 and 5, then which one of the following is required for that issue?",
+    "answer": "A",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_201506_4-G_4_21",
+    "question": "Which one of the following is NOT allowed for an issue of the newsletter?",
+    "answer": "E",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201512_3-G_1_3",
+    "question": "Shahpari CANNOT be scheduled to perform at which one of the following times?",
+    "answer": "D",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_201512_3-G_1_4",
+    "question": "What is the earliest time that Wu could be scheduled to perform?",
+    "answer": "C",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201512_3-G_2_8",
+    "question": "If Larsen's bowl is displayed in position 6 and Olivera's bowl is displayed in position 2, which one of the following must be true?",
+    "answer": "C",
+    "predicted_answer": "E"
+  },
+  {
+    "id": "ar_lsat_201512_3-G_2_9",
+    "question": "If Park's bowl is displayed in position 4, then the bowl displayed in position 2 must be",
+    "answer": "A",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201512_3-G_2_10",
+    "question": "If Larsen's bowl is displayed in position 1 and Olivera's bowl is displayed in position 4, which one of the following is a potter whose bowl CANNOT be displayed?",
+    "answer": "B",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201512_3-G_2_11",
+    "question": "Which one of the following is a potter whose bowl must be displayed?",
+    "answer": "B",
+    "predicted_answer": "E"
+  },
+  {
+    "id": "ar_lsat_201512_3-G_3_13",
+    "question": "Which one of the following is a possible matching of employees with the offices they select?",
+    "answer": "B",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201512_3-G_3_14",
+    "question": "Which one of the following must be true?",
+    "answer": "C",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201512_3-G_4_18",
+    "question": "Which one of the following could be the assignment of volunteers to Z?",
+    "answer": "E",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201512_3-G_4_19",
+    "question": "If Kwon is assigned to be treasurer for exactly two of the committees, then any of the following could be true EXCEPT:",
+    "answer": "C",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201512_3-G_4_20",
+    "question": "Each of the following must be true EXCEPT:",
+    "answer": "B",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201512_3-G_4_22",
+    "question": "The assignment of volunteers to committees and positions is fully determined if which one of the following is true?",
+    "answer": "C",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201609_3-G_1_1",
+    "question": "The five neighborhoods visited by the bookmobile, listed in order from Monday through Friday, could be",
+    "answer": "B",
+    "predicted_answer": "E"
+  },
+  {
+    "id": "ar_lsat_201609_3-G_1_2",
+    "question": "Which one of the following neighborhoods CANNOT be visited on Thursday?",
+    "answer": "C",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_201609_3-G_1_3",
+    "question": "If Hidden Hills is visited on Monday, which one of the following must be true?",
+    "answer": "A",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_201609_3-G_1_5",
+    "question": "If Nottingham is visited on Thursday, which one of the following must be true?",
+    "answer": "D",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201609_3-G_2_6",
+    "question": "Which one of the following is a permissible assignment of rangers to park areas?",
+    "answer": "E",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201609_3-G_2_7",
+    "question": "If Olsen is the sole ranger assigned to area 2, then which one of the following could be the complete assignment of rangers to area 3?",
+    "answer": "C",
+    "predicted_answer": "B"
+  },
+  {
+    "id": "ar_lsat_201609_3-G_2_9",
+    "question": "Which one of the following rangers CANNOT be assigned to area 3?",
+    "answer": "D",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201609_3-G_3_13",
+    "question": "Which one of the following could be the complete assignment of assistants to Pricing?",
+    "answer": "A",
+    "predicted_answer": "A"
+  },
+  {
+    "id": "ar_lsat_201609_3-G_3_15",
+    "question": "Which one of the following could be true?",
+    "answer": "A",
+    "predicted_answer": "C"
+  },
+  {
+    "id": "ar_lsat_201609_3-G_4_18",
+    "question": "One possible route of the virus from the first computer in the network infected to Q is",
+    "answer": "D",
+    "predicted_answer": "D"
+  },
+  {
+    "id": "ar_lsat_201609_3-G_4_21",
+    "question": "Any of the following computers could have transmitted the virus to two other computers on the network EXCEPT:",
+    "answer": "C",
+    "predicted_answer": "D"
+  }
+]

@@ -12,7 +12,7 @@ import re
 
 here = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(here, '..', '..', 'data')
-results_path = os.path.join(here, '..', '..', 'results')
+results_path = os.path.join(here, 'results', 'baseline')
 prompt_path = os.path.join(here, 'prompts', 'baseline')
 
 class LLaMA_Reasoning_Graph_Baseline:
@@ -25,9 +25,8 @@ class LLaMA_Reasoning_Graph_Baseline:
         self.save_path = args.save_path
         self.demonstration_path = args.demonstration_path
         self.mode = args.mode
-        self.model_type = args.model_type
     def load_prompts(self):
-        with open(os.path.join(self.demonstration_path, f'{self.dataset_name}_{self.mode}_{self.model_type}.txt')) as f:
+        with open(os.path.join(self.demonstration_path, f'{self.dataset_name}_{self.mode}_llama.txt')) as f:
             prompt_template = f.read()
         return prompt_template
 
@@ -84,14 +83,13 @@ class LLaMA_Reasoning_Graph_Baseline:
                     question = sample['question'].strip()
                     options = '\n'.join([opt.strip() for opt in sample['options']])
                     full_prompt = prompt_template.format(context=context, question=question, options=options)
-                    # import pdb
-                    # pdb.set_trace()
                     output = self.generate(full_prompt)
                     dict_output = self.update_answer(sample, output)
+                    print(dict_output)
                     outputs.append(dict_output)
                 except Exception as e:
                     print(f'Error in generating example {sample["id"]}: {e}')
-        file_path = os.path.join(self.save_path, f'{self.mode}_{self.dataset_name}_{self.split}_{self.model_type}.json')
+        file_path = os.path.join(self.save_path, f'{self.mode}_{self.dataset_name}_{self.split}_llama.json')
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(outputs, f, indent=2, ensure_ascii=False)
@@ -114,14 +112,13 @@ class LLaMA_Reasoning_Graph_Baseline:
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_path', type=str, default=data_path)
-    parser.add_argument('--dataset_name', type=str, default="FOLIO")
+    parser.add_argument('--dataset_name', type=str, default="ProntoQA")
     parser.add_argument('--split', type=str, default='dev')
     parser.add_argument('--save_path', type=str, default=results_path)
     parser.add_argument('--demonstration_path', type=str, default=prompt_path)
-    parser.add_argument('--model_type', type=str, default="llama")
-    parser.add_argument('--model_name', type=str, default='llama3.1:70b')
+    parser.add_argument('--model_name', type=str, default='llama3:8b')
     parser.add_argument('--stop_words', type=str, default='------')
-    parser.add_argument('--mode', type=str, default="Direct")
+    parser.add_argument('--mode', type=str, default="CoT")
     parser.add_argument('--max_new_tokens', type=int, default = 4096)
     args = parser.parse_args()
     return args

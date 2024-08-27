@@ -1,0 +1,132 @@
+dev0-p
+Constants:
+Bonnie ::: The name of a person.
+
+Predicates:
+Perform_In_School_Talent_Shows_Often(x) ::: x performs in school talent shows often.
+Attend_And_Very_Engaged_With_School_Events(x) ::: x attends and is very engaged with school events.
+Is_Inactive_Disinterested_Member_Of_Community(x) ::: x is an inactive disinterested member of their community.
+Chaperone_High_School_Dances(x) ::: x chaperones high school dances.
+Is_Not_Student_Attending_School(x) ::: x is not a student who attends the school.
+Is_Young_Children_Teenagers(x) ::: x is young children and teenagers.
+Further_Academic_Careers_Educational_Opportunities(x) ::: x wishes to further their academic careers and educational opportunities.
+
+Premises:
+∀x (Perform_In_School_Talent_Shows_Often(x) → Attend_And_Very_Engaged_With_School_Events(x)) ::: If people perform in school talent shows often, then they attend and are very engaged with school events.
+∀x (Perform_In_School_Talent_Shows_Often(x) ⊕ Is_Inactive_Disinterested_Member_Of_Community(x)) ::: People either perform in school talent shows often or are inactive disinterested members of their community.
+∀x (Chaperone_High_School_Dances(x) → Is_Not_Student_Attending_School(x)) ::: If people chaperone high school dances, then they are not students who attend the school.
+∀x (Is_Inactive_Disinterested_Member_Of_Community(x) → Chaperone_High_School_Dances(x)) ::: All people who are inactive and disinterested members of their community chaperone high school dances.
+∀x ((Is_Young_Children_Teenagers(x) ∧ Further_Academic_Careers_Educational_Opportunities(x)) → Is_Not_Student_Attending_School(x)) ::: All young children and teenagers who wish to further their academic careers and educational opportunities are students who attend the school.
+(Bonnie_Attend_And_Very_Engaged_With_School_Events ∧ Bonnie_Is_Not_Student_Attending_School) ⊕ ¬(Bonnie_Attend_And_Very_Engaged_With_School_Events ∨ Bonnie_Is_Not_Student_Attending_School) ::: Bonnie either both attends and is very engaged with school events and is a student who attends the school, or she neither attends and is very engaged with school events nor is a student who attends the school.
+
+Query:
+Perform_In_School_Talent_Shows_Often(Bonnie) ::: Bonnie performs in school talent shows often.
+
+
+
+
+
+
+dev1-s
+Constants:
+Bonnie ::: The name of a person.
+ 
+Predicates:
+Perform_in_school_talent_shows_often(x) ::: x performs in school talent shows often.
+Attend_and_are_very_engaged_with_school_events(x) ::: x attends and is very engaged with school events.
+Are_inactive_and_disinterested_members_of_their_community(x) ::: x is an inactive and disinterested member of their community.
+Chaperone_high_school_dances(x) ::: x chaperones high school dances.
+Is_student_who_attend_the_school(x) ::: x is a student who attends the school.
+Is_young_child_or_teennager(x) ::: x is a young child or teenager.
+Wish_to_further_academic_career_and_educational_opportunities(x) ::: x wishes to further academic career and educational opportunities.
+
+Premises:
+∀x (Perform_in_school_talent_shows_often(x) → Attend_and_are_very_engaged_with_school_events(x)) ::: If people perform in school talent shows often, then they attend and are very engaged with school events.
+∀x (Perform_in_school_talent_shows_often(x) ⊕ Are_inactive_and_disinterested_members_of_their_community(x)) ::: People either perform in school talent shows often or are inactive and disinterested members of their community.
+∀x (Chaperone_high_school_dances(x) → ¬Is_student_who_attend_the_school(x)) ::: If people chaperone high school dances, then they are not students who attend the school.
+∀x (Are_inactive_and_disinterested_members_of_their_community(x) → Chaperone_high_school_dances(x)) ::: All people who are inactive and disinterested members of their community chaperone high school dances.
+∀x ((Is_young_child_or_teennager(x) ∧ Wish_to_further_academic_career_and_educational_opportunities(x)) → Is_student_who_attend_the_school(x)) ::: All young children and teenagers who wish to further their academic careers and educational opportunities are students who attend the school.
+(Associated_with_and_Attend(Bonnie) ∧ Is_student_who_attend_the_school(Bonnie)) ⊕ ¬(Associated_with_and_Attend(Bonnie) ∨ Is_student_who_attend_the_school(Bonnie)) ::: Bonnie either both attends and is very engaged with school events and is a student who attends the school, or she neither attends and is very engaged with school events nor is a student who attends the school.
+
+Query:
+(((Is_young_child_or_teennager(Bonnie) ∧ Wish_to_further_academic_career_and_educational_opportunities(Bonnie)) ⊕ ¬(Is_young_child_or_teennager(Bonnie) ∨ Wish_to_further_academic_career_and_educational_opportunities(Bonnie))) → (Is_student_who_attend_the_school(Bonnie) ⊕ Are_inactive_and_disinterested_members_of_their_community(Bonnie))) ::: If Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager who wishes to further her academic career and educational opportunities, then Bonnie is either a student who attends the school or is an inactive and disinterested member of the community.
+
+
+
+
+dev9-p
+Constants:
+Tom ::: The name of an individual wild turkey.
+Eastern_wild_turkey ::: Eastern wild turkey.
+Osceola_wild_turkey ::: Osceola wild turkey.
+Gould's_wild_turkey ::: Gould’s wild turkey.
+Merriam's_wild_turkey ::: Merriam’s wild turkey.
+Rio_Grande_wild_turkey ::: Rio Grande wild turkey.
+Ocellated_wild_turkey ::: Ocellated wild turkey.
+
+Predicates:
+Is_Eastern_Wild_Turkey(x) ::: x is an Eastern wild turkey.
+Is_Osceola_Wild_Turkey(x) ::: x is an Osceola wild turkey.
+Is_Gould's_Wild_Turkey(x) ::: x is a Gould’s wild turkey.
+Is_Merriam's_Wild_Turkey(x) ::: x is a Merriam’s wild turkey.
+Is_Rio_Grande_Wild_Turkey(x) ::: x is a Rio Grande wild turkey.
+Is_Ocellated_Wild_Turkey(x) ::: x is an Ocellated wild turkey.
+Is_wild_turkey(x) ::: x is a wild turkey.
+
+Premises:
+∀x (Is_Eastern_Wild_Turkey(x) ∨ Is_Osceola_Wild_Turkey(x) ∨ Is_Gould's_Wild_Turkey(x) ∨ Is_Merriam's_Wild_Turkey(x) ∨ Is_Rio_Grande_Wild_Turkey(x) ∨ Is_Ocellated_Wild_Turkey(x)) → Is_wild_turkey(x)) ::: There are six types of wild turkeys.
+¬Is_Eastern_Wild_Turkey(Tom) ::: Tom is not an Eastern wild turkey.
+¬Is_Osceola_Wild_Turkey(Tom) ::: Tom is not an Osceola wild turkey.
+¬(Is_Gould's_Wild_Turkey(Tom) ∨ Is_Merriam's_Wild_Turkey(Tom) ∨ Is_Rio_Grande_Wild_Turkey(Tom)) ::: Tom is also not a Gould’s wild turkey, or a Merriam’s wild turkey, or a Rio Grande wild turkey.
+Is_wild_turkey(Tom) ::: Tom is a wild turkey.
+
+Query:
+Is_Ocellated_Wild_Turkey(Tom) ::: Tom is an Ocellated wild turkey.
+
+dev10-e
+Constants:
+Tom ::: The name of a turkey.
+Eastern_wild_turkey ::: Eastern wild turkey.
+Osceola_wild_turkey ::: Osceola wild turkey.
+Gould’s_wild_turkey ::: Gould's wild turkey.
+Merriam’s_wild_turkey ::: Merriam's wild turkey.
+Rio_Grande_wild_turkey ::: Rio Grande wild turkey.
+Ocellated_wild_turkey ::: Ocellated wild turkey.
+
+Predicates:
+Is_Eastern_wild_turkey(x) ::: x is an Eastern wild turkey.
+Is_Osceola_wild_turkey(x) ::: x is an Osceola wild turkey.
+Is_Gould’s_wild_turkey(x) ::: x is a Gould's wild turkey.
+Is_Merriam’s_wild_turkey(x) ::: x is a Merriam's wild turkey.
+Is_Rio_Grande_wild_turkey(x) ::: x is a Rio Grande wild turkey.
+Is_Ocellated_wild_turkey(x) ::: x is an Ocellated wild turkey.
+Is_Wild_Turkey(x) ::: x is a wild turkey.
+
+Premises:
+¬Is_Eastern_wild_turkey(Tom) ::: Tom is not an Eastern wild turkey.
+¬Is_Osceola_wild_turkey(Tom) ::: Tom is not an Osceola wild turkey.
+¬(Is_Gould’s_wild_turkey(Tom) ∨ Is_Merriam’s_wild_turkey(Tom) ∨ Is_Rio_Grande_wild_turkey(Tom)) ::: Tom is also not a Gould's wild turkey, or a Merriam's wild turkey, or a Rio Grande wild turkey.
+Is_Wild_Turkey(Tom) ::: Tom is a wild turkey.
+
+Query:
+Is_Eastern_wild_turkey(Tom) ::: Is the statement \"Tom is an Eastern wild turkey\" true?
+
+dev12-p
+Constants:
+Japanese ::: The name of nationality.
+The_Legend_of_Zelda ::: The name of a game.
+
+Predicates:
+Is_Japanese(x) ::: x is Japanese.
+Make_Game(x, y) ::: x makes the game y.
+Is_In_Top_10_List(x) ::: x is in the Top 10 list.
+Sell_More_than_One_Million_Copies(x) ::: x sells more than one million copies.
+
+Premises:
+Is_Japanese(The_Legend_of_Zelda_Company) ∧ Make_Game(The_Legend_of_Zelda_Company, The_Legend_of_Zelda) ::: A Japanese game company created the game the Legend of Zelda.
+∀x (Is_In_Top_10_List(x) → ∃y (Is_Japanese(y) ∧ Make_Game(y, x))) ::: All games in the Top 10 list are made by Japanese game companies.
+Sell_More_than_One_Million_Copies(x) → Is_In_Top_10_List(x) ::: If a game sells more than one million copies, then it will be selected into the Top 10 list.
+Sell_More_than_One_Million_Copies(The_Legend_of_Zelda) ::: The Legend of Zelda sold more than one million copies.
+
+Query:
+Is_In_Top_10_List(The_Legend_of_Zelda) ::: Is The Legend of Zelda in the Top 10 list.

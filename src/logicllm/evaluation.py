@@ -123,5 +123,5 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
     here = os.path.dirname(os.path.abspath(__file__))
-    result_file = os.path.join(here, 'results', 'logical_inference', args.file_name)
+    result_file = os.path.join(here, 'results', 'baseline', args.file_name)
     evaluate_QA(result_file)

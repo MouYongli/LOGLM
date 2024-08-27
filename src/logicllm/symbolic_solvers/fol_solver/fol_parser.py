@@ -27,15 +27,12 @@ class FOL_Parser:
         """
         ## NOTE: currenly we don't support FOL string that does not follow the grammar defined above. 
         # rule_str = self.reorder_quantifiers(rule_str)
-    
         r, parsed_fol_str = self.msplit(rule_str)
         cfg_str = self.make_cfg_str(r)
-
         grammar = nltk.CFG.fromstring(cfg_str)
         parser = nltk.ChartParser(grammar)
         # note this function might run forever if the string is not parsable
         tree = parser.parse_one(r) 
-        
         return tree
     
     def reorder_quantifiers(self, rule_str):

@@ -106,9 +106,9 @@ class LogicInferenceEngine:
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset_name', type=str, default='FOLIO')
-    parser.add_argument('--logical_programs_file_name', type=str, default='Combined_FOLIO_dev_llama70b_logical_programs')
+    parser.add_argument('--logical_programs_file_name', type=str, default='Logical_rules_FOLIO_dev_llama8b_logical_programs')
     parser.add_argument('--backup_strategy', type=str, default='LLM', choices=['random', 'LLM'])
-    parser.add_argument('--backup_LLM_result_path', type=str, default='./results/baseline/CoT_FOLIO_dev_llama70b.json')
+    parser.add_argument('--backup_LLM_result_path', type=str, default='./results/baseline/CoT_FOLIO_dev_llama8b.json')
     parser.add_argument('--timeout', type=int, default=5)
     args = parser.parse_args()
     return args

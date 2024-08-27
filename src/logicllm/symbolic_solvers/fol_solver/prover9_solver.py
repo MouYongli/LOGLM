@@ -36,8 +36,7 @@ class FOL_Prover9_Program:
             self.logic_premises = [premise.split(':::')[0].strip() for premise in premises]
             self.logic_conclusion = query[0].split(':::')[0].strip()
 
-            # import pdb
-            # pdb.set_trace()
+
             # convert to prover9 format
             self.prover9_premises = []
             for premise in self.logic_premises:
@@ -52,7 +51,8 @@ class FOL_Prover9_Program:
                 return False
             self.prover9_conclusion = Prover9_FOL_Formula(fol_conclusion).formula
             return True
-        except:
+        except Exception as e:
+            print(e)
             return False
 
     def execute_program(self):
@@ -80,6 +80,7 @@ class FOL_Prover9_Program:
                 else:
                     return 'Unknown', ''
         except Exception as e:
+            print(e)
             return None, str(e)
         
     def answer_mapping(self, answer):

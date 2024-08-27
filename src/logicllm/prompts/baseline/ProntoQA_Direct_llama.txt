@@ -1,0 +1,43 @@
+# Task: 
+Given a problem statement as contexts, the task is to answer a logical reasoning question. Please refer to the examples for the output format. 
+
+# Examples:
+Example 1:
+
+Context:
+Jompuses are not shy. Jompuses are yumpuses. Each yumpus is aggressive. Each yumpus is a dumpus. Dumpuses are not wooden. Dumpuses are wumpuses. Wumpuses are red. Every wumpus is an impus. Each impus is opaque. Impuses are tumpuses. Numpuses are sour. Tumpuses are not sour. Tumpuses are vumpuses. Vumpuses are earthy. Every vumpus is a zumpus. Zumpuses are small. Zumpuses are rompuses. Max is a yumpus.
+
+Question: Is the following statement true or false? Max is sour.
+
+Options:
+A) True
+B) False
+
+The correct option is: B
+
+Example 2:
+Context:
+Every tumpus is not angry. Tumpuses are rompuses. Every numpus is not bright. Rompuses are not luminous. Rompuses are yumpuses. Yumpuses are transparent. Yumpuses are zumpuses. Each zumpus is not bitter. Zumpuses are impuses. Impuses are red. Each impus is a dumpus. Every dumpus is happy. Each dumpus is a vumpus. Vumpuses are bright. Every vumpus is a jompus. Jompuses are large. Each jompus is a wumpus. Stella is a yumpus.
+
+Question: Is the following statement true or false? Stella is bright.
+
+Options:
+A) True
+B) False
+
+The correct option is: A
+
+# Output
+Now do the same for the following problem, consider the given context, question and options, output the result in json follow the instruction of correct_option:
+Context:
+{context}
+
+Question: 
+{question}
+
+Options:
+{options}
+
+```
+"correct_option": str = "Specify the final chosen option (From options, normally just A, B) that correctly answers the question based on the context provided."
+```

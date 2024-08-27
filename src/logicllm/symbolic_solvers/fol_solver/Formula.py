@@ -17,10 +17,11 @@ class FOL_Formula:
         try:
             tree = self.parser.parse_text_FOL_to_tree(str_fol)
         except Exception as exc:
+            print(exc)
             tree = None
             self.is_valid = False
             return
-    
+
         self.tree = tree
         if tree is None:
             self.is_valid = False

@@ -169,7 +169,7 @@ def parse_args():
     parser.add_argument('--dataset_name', type=str, default="FOLIO")
     parser.add_argument('--prompt_file', type=str, default="FOLIO_with_logical_rules")
     parser.add_argument('--split', type=str, default='dev')
-    parser.add_argument('--model_name', type=str, default='llama3.1:70b')
+    parser.add_argument('--model_name', type=str, default='llama3:8b')
     args = parser.parse_args()
     return args
 

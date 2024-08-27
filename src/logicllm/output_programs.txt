@@ -1,0 +1,386 @@
+Loaded 58 examples.
+['∀x (Perform_In_School_Talent_Shows_Often(x) → Attend_And_Very_Engaged_With_School_Events(x))', '∀x (Perform_In_School_Talent_Shows_Often(x) ⊕ Is_Inactive_Disinterested_Member_Of_Community(x))', '∀x (Chaperone_High_School_Dances(x) → Is_Not_Student_Attending_School(x))', '∀x (Is_Inactive_Disinterested_Member_Of_Community(x) → Chaperone_High_School_Dances(x))', '∀x ((Is_Young_Children_Teenagers(x) ∧ Further_Academic_Careers_Educational_Opportunities(x)) → Is_Not_Student_Attending_School(x))', '(Bonnie_Attend_And_Very_Engaged_With_School_Events ∧ Bonnie_Is_Not_Student_Attending_School) ⊕ ¬(Bonnie_Attend_And_Very_Engaged_With_School_Events ∨ Bonnie_Is_Not_Student_Attending_School)']
+Perform_In_School_Talent_Shows_Often(Bonnie)
+---------------------------
+∀x (Perform_In_School_Talent_Shows_Often(x) → Attend_And_Very_Engaged_With_School_Events(x))
+∀x (Perform_In_School_Talent_Shows_Often(x) ⊕ Is_Inactive_Disinterested_Member_Of_Community(x))
+∀x (Chaperone_High_School_Dances(x) → Is_Not_Student_Attending_School(x))
+∀x (Is_Inactive_Disinterested_Member_Of_Community(x) → Chaperone_High_School_Dances(x))
+∀x ((Is_Young_Children_Teenagers(x) ∧ Further_Academic_Careers_Educational_Opportunities(x)) → Is_Not_Student_Attending_School(x))
+'NoneType' object has no attribute 'leaves'
+["∀x (Is_Eastern_Wild_Turkey(x) ∨ Is_Osceola_Wild_Turkey(x) ∨ Is_Gould's_Wild_Turkey(x) ∨ Is_Merriam's_Wild_Turkey(x) ∨ Is_Rio_Grande_Wild_Turkey(x) ∨ Is_Ocellated_Wild_Turkey(x)) → Is_wild_turkey(x))", '¬Is_Eastern_Wild_Turkey(Tom)', '¬Is_Osceola_Wild_Turkey(Tom)', "¬(Is_Gould's_Wild_Turkey(Tom) ∨ Is_Merriam's_Wild_Turkey(Tom) ∨ Is_Rio_Grande_Wild_Turkey(Tom))", 'Is_wild_turkey(Tom)']
+Is_Ocellated_Wild_Turkey(Tom)
+---------------------------
+'NoneType' object has no attribute 'leaves'
+['Is_Japanese(The_Legend_of_Zelda_Company) ∧ Make_Game(The_Legend_of_Zelda_Company, The_Legend_of_Zelda)', '∀x (Is_In_Top_10_List(x) → ∃y (Is_Japanese(y) ∧ Make_Game(y, x)))', 'Sell_More_than_One_Million_Copies(x) → Is_In_Top_10_List(x)', 'Sell_More_than_One_Million_Copies(The_Legend_of_Zelda)']
+Is_In_Top_10_List(The_Legend_of_Zelda)
+---------------------------
+Is_Japanese(The_Legend_of_Zelda_Company) ∧ Make_Game(The_Legend_of_Zelda_Company, The_Legend_of_Zelda)
+'NoneType' object has no attribute 'leaves'
+['Is_Netflix_Show(Stranger_Things) ∧ Is_Popular(Stranger_Things)', '∀x (Is_Netflix_Show(x) ∧ Is_Popular(x)) → Binge_Watch(Karen, x)', '∀x ∀y ((Binge_Watch(Karen, y) ↔ Will_Download(Karen, y))) ∧ Is_Netflix_Show(y))', '¬Will_Download(Karen, Black_Mirror)', 'Is_Netflix_Show(Black_Mirror)', '∀x ∀y (Binge_Watch(Karen, x) ∧ Is_Netflix_Show(y)) → Will_Share(Karen, y, Lisa)']
+Will_Share(Karen, Stranger_Things, Lisa)
+---------------------------
+Is_Netflix_Show(Stranger_Things) ∧ Is_Popular(Stranger_Things)
+∀x (Is_Netflix_Show(x) ∧ Is_Popular(x)) → Binge_Watch(Karen, x)
+'NoneType' object has no attribute 'leaves'
+['Is_Popular(Stranger_Things)', '∀x (∀y (Is_Popular(y) ∧ Is_Netflix_Show(y)) → Will_Binge_Watch(x, y)))', '∀x ∀y ((Will_Binge_Watch(x, y) ↔ Will_Download(x, y)) ∧ Is_Netflix_Show(y))', '¬Will_Download(Karen, Black_Mirror)', 'Is_Netflix_Show(Black_Mirror)', '∀x ∀y (Will_Binge_Watch(x, y) → Will_Share(x, y, Lisa))']
+Will_Share(Karen, Black_Mirror, Lisa)
+---------------------------
+Is_Popular(Stranger_Things)
+'NoneType' object has no attribute 'leaves'
+['Is_Capital_Of(Beijing, China)', 'Is_Located_In(Beijing, Northern_China)', 'Hosted_Event(Beijing, Summer_Olympics_2008)', '∃x (Has_Ranked_Among(x, best_in_Asia_Pacific_and_world) ∧ Is_University_Of(x))']
+¬∃x ∃y (Is_City(y) ∧ x = 2 ∧ y > x ∧ Located_In(y, China))
+---------------------------
+Is_Capital_Of(Beijing, China)
+Is_Located_In(Beijing, Northern_China)
+Hosted_Event(Beijing, Summer_Olympics_2008)
+∃x (Has_Ranked_Among(x, Best_in_Asia_Pacific_and_world) ∧ Is_University_Of(x))
+['∀x (Is_GrandSlamChampion(x) ∨ Is_OscarNominatedActor(x))', '∀x (Is_GrandSlamChampion(x) → Is_ProfessionalTennisPlayer(x))', '∀x (Is_OscarNominatedActor(x) → Is_Celebrity(x))', '∀x (Is_ProfessionalTennisPlayer(x) → Is_Athlete(x))', '∀x (Is_Celebrity(x) → Is_WellPaid(x))', '∀x (Is_Athlete(x) → Famous(x))', '∀x (Is_WellPaid(x) → ∃y Lives_In_TaxHaven(x, y))', '(Is_Famous(Djokovic) ∧ Is_Athlete(Djokovic)) → (∃y Lives_In_TaxHaven(Djokovic, y) ∧ Is_WellPaid(Djokovic))']
+¬∃y Lives_In_TaxHaven(Djokovic, y)
+---------------------------
+∀x (Is_GrandSlamChampion(x) ∨ Is_OscarNominatedActor(x))
+∀x (Is_GrandSlamChampion(x) → Is_ProfessionalTennisPlayer(x))
+∀x (Is_OscarNominatedActor(x) → Is_Celebrity(x))
+∀x (Is_ProfessionalTennisPlayer(x) → Is_Athlete(x))
+∀x (Is_Celebrity(x) → Is_WellPaid(x))
+∀x (Is_Athlete(x) → Famous(x))
+'NoneType' object has no attribute 'leaves'
+['Is_Music_Piece(Symphony_No_9)', '∀x (Is_Composer(x) → ∃y (Write_Music_Piece(x, y) ∧ Is_Music_Piece(y)))', 'Write_Music_Piece(Beethoven, Symphony_No_9)', 'Premier(Vienna_Music_Society, Symphony_No_9)', 'Is_Orchestra(Vienna_Music_Society)', 'Lead(Beethoven, Vienna_Music_Society)', '∀x (Is_Orchestra(x) → ∃y (Lead(y, x) ∧ Is_Conductor(y)))']
+Is_Composer(Beethoven)
+---------------------------
+Is_Music_Piece(Symphony_No_9)
+'NoneType' object has no attribute 'leaves'
+['Is_Composer(Beethoven) ∧ Write(Beethoven, Symphony_No_9)', 'Is_Music_Piece(Symphony_No_9)', 'Premiered(Vienna_Music_Society, Symphony_No_9)', 'Is_Orchestra(Vienna_Music_Society)', 'Lead(Beethoven, Vienna_Music_Society)', '∀x (Is_Orchestra(x) → ∃y (Is_Conductor(y) ∧ Lead(y, x)))']
+∃x (Is_Orchestra(x) ∧ Premiered(x, Symphony_No_9))
+---------------------------
+Is_Composer(Beethoven) ∧ Write(Beethoven, Symphony_No_9)
+Is_Music_Piece(Symphony_No_9)
+Premiered(Vienna_Music_Society, Symphony_No_9)
+Is_Orchestra(Vienna_Music_Society)
+Lead(Beethoven, Vienna_Music_Society)
+'NoneType' object has no attribute 'leaves'
+['Is_Music_Piece(Symphony_No_9)', '∀x (Is_Composer(x) → ∃y (Is_Music_Piece(y) ∧ Write(x, y)))', 'Write(Beethoven, Symphony_No_9)', 'Premiere(Vienna_Music_Society, Symphony_No_9)', 'Is_Orchestra(Vienna_Music_Society)', 'Lead(Beethoven, Vienna_Music_Society)', '∀x (Is_Orchestra(x) → ∃y (Is_Conductor(y) ∧ Lead(y, x)))']
+¬Is_Conductor(Beethoven)
+---------------------------
+Is_Music_Piece(Symphony_No_9)
+'NoneType' object has no attribute 'leaves'
+['∀x (Is_Highly_Ranked_By_Women_Tennis_Association(x) → Is_Active_In_Major_Tennis(x))', '∀x (Lost_To_Iga_Świątek(x) → Is_Highly_Ranked_By_Women_Tennis_Association(x))', '∀x (Is_Female_Tennis_Player_At_Roland_Garros_2022(x) → Lost_To_Iga_Świątek(x))', '∃x (Is_Female_Tennis_Player_At_Roland_Garros_2022(x)) ⊕ ∃y (Is_Male_Tennis_Player_At_Roland_Garros_2022(y))', '∀x (Is_Male_Tennis_Player_At_Roland_Garros_2022(x) → Lost_To_Rafael_Nadal(x))', '(Is_Highly_Ranked_By_Women_Tennis_Association(Coco_Gauff) ∨ Lost_To_Rafael_Nadal(Coco_Gauff)) → ¬Is_Male_Tennis_Player_At_Roland_Garros_2022(Coco_Gauff)']
+Is_Active_In_Major_Tennis(Coco_Gauff)
+---------------------------
+∀x (Is_Highly_Ranked_By_Women_Tennis_Association(x) → Is_Active_In_Major_Tennis(x))
+∀x (Lost_To_Iga_Świątek(x) → Is_Highly_Ranked_By_Women_Tennis_Association(x))
+∀x (Is_Female_Tennis_Player_At_Roland_Garros_2022(x) → Lost_To_Iga_Świątek(x))
+'NoneType' object has no attribute 'leaves'
+['∀x (Want_Long_Vacation(x) → Love_Most(x, Summer))', 'Is_Favorite_Season_Of(Emma, Summer)', '¬Is_Favorite_Season_Of(Mia, Is_Favorite_Season_Of(Emma, x))', 'Want_Long_Vacation(James)']
+Is_Favorite_Season_Of(James, Fall)
+---------------------------
+∀x (Want_Long_Vacation(x) → Love_Most(x, Summer))
+Is_Favorite_Season_Of(Emma, Summer)
+'NoneType' object has no attribute 'leaves'
+['∀x (Love_Long_Vacation(x) → Favorite(x, Summer))', 'Favorite(Emma, Summer)', '¬(Mia = Emma) ∧ ¬(Favorite(Mia, x) → Favorite(Emma, x))', 'Love_Long_Vacation(James)']
+Favorite(Mia, Spring)
+---------------------------
+∀x (Love_Long_Vacation(x) → Favorite(x, Summer))
+Favorite(Emma, Summer)
+'NoneType' object has no attribute 'leaves'
+['∀x (Is_Romance_Language(x) → Is_Indo_European_Language(x))', '∀x ∃y (Is_In(x, y) → Are_Related(x, y))', 'Is_Romance_Language(French) ∧ Is_Romance_Language(Spanish)', 'Are_Related(German, Spanish)', '¬∃x (Basque = x ∧ Are_Related(Basque, x))']
+Is_Romance_Language(Basque)
+---------------------------
+∀x (Is_Romance_Language(x) → Is_Indo_European_Language(x))
+∀x ∃y (Is_In(x, y) → Are_Related(x, y))
+Is_Romance_Language(French) ∧ Is_Romance_Language(Spanish)
+Are_Related(German, Spanish)
+'NoneType' object has no attribute 'leaves'
+['Is_Striker(Robert_Lewandowski)', '∀x (Is_Striker(x) → Is_Soccer_Player(x))', 'Left_Team(Robert_Lewandowski, Bayern_Munchen)', '∀x ∀y (Left_Team(x, y) → ¬Play_For(x, y))']
+¬∃x ∃y (Is_Soccer_Player(x) ∧ Is_Striker(y) ∧ Play_For(x, Bayern_Munchen) ∧ x = y)
+---------------------------
+Is_Striker(Robert_Lewandowski)
+∀x (Is_Striker(x) → Is_Soccer_Player(x))
+Left_Team(Robert_Lewandowski, Bayern_Munchen)
+∀x ∀y (Left_Team(x, y) → ¬Play_For(x, y))
+['Is_Private_Ivy_League(Yale_University)', 'Move_to(Yale_University, New_Haven) ∧ Move_to_in_Year(Yale_University, Year_17_16)', 'Has_Endowment_Valued_At(Yale_University, 42_3_Billion)', 'Organized_Into_Constituent_Colleges_And_Schools(Yale_University, 27)', 'Is_Residential_College(Benjamin_Franklin_College)', 'Is_Residential_College(Berkeley_College)', 'Is_Residential_College(Branford_College)', 'Is_Residential_College(Davenport_College)', 'Is_Residential_College(Ezra_Stiles_College)', 'Is_Residential_College(Grace_Hopper_College)', 'Is_Residential_College(Jonathan_Edwards_College)', 'Is_Residential_College(Morse_College)', 'Is_Residential_College(Pauli_Murray_College)', 'Is_Residential_College(Pierson_College)', 'Is_Residential_College(Saybrook_College)', 'Is_Residential_College(Silliman_College)', 'Is_Residential_College(Timothy_Dwight_College)', 'Is_Residential_College(Trumbull_College)']
+∀x (Has_Endowment_Valued_At(x, y) → (y < 42_3_Billion))
+---------------------------
+Is_Private_Ivy_League(Yale_University)
+Move_to(Yale_University, New_Haven) ∧ Move_to_in_Year(Yale_University, Year_17_16)
+Has_Endowment_Valued_At(Yale_University, 42_3_Billion)
+Organized_Into_Constituent_Colleges_And_Schools(Yale_University, 27)
+Is_Residential_College(Benjamin_Franklin_College)
+Is_Residential_College(Berkeley_College)
+Is_Residential_College(Branford_College)
+Is_Residential_College(Davenport_College)
+Is_Residential_College(Ezra_Stiles_College)
+Is_Residential_College(Grace_Hopper_College)
+Is_Residential_College(Jonathan_Edwards_College)
+Is_Residential_College(Morse_College)
+Is_Residential_College(Pauli_Murray_College)
+Is_Residential_College(Pierson_College)
+Is_Residential_College(Saybrook_College)
+Is_Residential_College(Silliman_College)
+Is_Residential_College(Timothy_Dwight_College)
+Is_Residential_College(Trumbull_College)
+["Is_British(Badults) ∧ Star(Members_of_Pappy's, Badults) ∧ Pilot_In(Badults, BBC_Three)", 'Is_Script_Editor_For(Andrew_Collins, Badults)']
+¬∃x ∃y (Star(Members_of_Pappy's, y) ∧ Pilot_In(y, x)) ∧ (x = BBC_Two ∨ x = BBC_Three))
+---------------------------
+Is_British(Badults) ∧ Star(Members_of_Pappys, Badults) ∧ Pilot_In(Badults, BBC_Three)
+Is_Script_Editor_For(Andrew_Collins, Badults)
+['∀x (Work_in_student_jobs_on_campus(x) → Need_to_earn_money_to_help_pay_for_college_tuition(x))', '∀x (Order_takeout_frequently_in_college(x) → Work_in_student_jobs_on_campus(x))', '∀x (Order_takeout_frequently_in_college(x) ⊕ Enjoy_dining_hall_meals_and_recipes(x))', '∀x (Enjoy_dining_hall_meals_and_recipes(x) → ¬Is_picky_eater(x))', '∀x (Enjoy_dining_hall_meals_and_recipes(x) → Spend_a_lot_of_time_eating_and_catching_up_with_friends_in_the_campus_dining_halls(x))', '¬(Work_in_student_jobs_on_campus(Mary) ∧ Need_to_earn_money_to_help_pay_for_college_tuition(Mary)) → (Is_picky_eater(Mary) ∨ Need_to_earn_money_to_help_pay_for_college_tuition(Mary)))']
+¬Is_picky_eater(Mary) ∧ Spend_a_lot_of_time_eating_and_catching_up_with_friends_in_the_campus_dining_halls(Mary)
+---------------------------
+∀x (Work_in_student_jobs_on_campus(x) → Need_to_earn_money_to_help_pay_for_college_tuition(x))
+∀x (Order_takeout_frequently_in_college(x) → Work_in_student_jobs_on_campus(x))
+∀x (Order_takeout_frequently_in_college(x) ⊕ Enjoy_dining_hall_meals_and_recipes(x))
+∀x (Enjoy_dining_hall_meals_and_recipes(x) → ¬Is_picky_eater(x))
+∀x (Enjoy_dining_hall_meals_and_recipes(x) → Spend_a_lot_of_time_eating_and_catching_up_with_friends_in_the_campus_dining_halls(x))
+'NoneType' object has no attribute 'leaves'
+['∀x (Is_listed_in_Yelp_recommendations(x) → ¬Receive_many_negative_reviews(x))', '∀x (Has_rating_greater_than_9(x) → Is_listed_in_Yelp_recommendations(x))', '∃x (∧Provide_take_out_service(x) ∧ Receive_many_negative_reviews(x))', '∀x (Is_popular_among_local_residents(x) → Has_rating_greater_than_9(x))', '(Has_rating_greater_than_9(Subway) ∨ Is_popular_among_local_residents(Subway))']
+((Provide_take_out_service(Subway) ∧ Receive_many_negative_reviews(Subway)) → (Has_rating_greater_than_9(Subway) ∧ ¬Provide_take_out_service(Subway)))
+---------------------------
+∀x (Is_listed_in_Yelp_recommendations(x) → ¬Receive_many_negative_reviews(x))
+∀x (Has_rating_greater_than_9(x) → Is_listed_in_Yelp_recommendations(x))
+'NoneType' object has no attribute 'leaves'
+['∀x (Is_superhero_movie(x) → Win(Is_good_guy, Is_bad_guy))', 'Is_superhero_movie(The_Surprising_Adventures_of_Sir_Digby_Chicken_Caesar)', '∀x ∀y (Fight(x, y) → Fight(y, x))', 'Fight(Sir_Digby_Chicken_Caesar, Is_nemesis(Sir_Digby_Chicken_Caesar))', '∀x (Is_superhero_movie_named_after(x) → Is_good_guy(x))', 'Is_superhero_movie_named_after(The_Surprising_Adventures_of_Sir_Digby_Chicken_Caesar, Sir_Digby_Chicken_Caesar)', '∀x ∀y (Win(x, y) → Lose(y, x))', '∀x (Is_superhero_movie_named_after(x, y) → Appear_in_movie(y, x))']
+Lose(Is_nemesis(Sir_Digby_Chicken_Caesar), Sir_Digby_Chicken_Caesar)
+---------------------------
+∀x (Is_superhero_movie(x) → Win(Is_good_guy, Is_bad_guy))
+Is_superhero_movie(The_Surprising_Adventures_of_Sir_Digby_Chicken_Caesar)
+∀x ∀y (Fight(x, y) → Fight(y, x))
+'NoneType' object has no attribute 'leaves'
+['∀x (x = Walden → Contain(x, tons_of_knowledge))', '∀x ∀y ((Reads(x, y) ∧ y = Walden) → Gains_Knowledge(x, y))', '∀x (Gains_Knowledge(x, Walden) → Is_Smarter(x))', 'Reads(Harry, Walden)']
+Is_Smarter(Harry)
+---------------------------
+'NoneType' object has no attribute 'leaves'
+['∃x (Is_Managed_Building(x) ∧ Allow_Pet(x))', '∀x (Is_Managed_Building(x) → Require_Deposit(x))', '∀x ∀y (Is_Security_Deposit(x, y) → (x ≥ $2000 ∨ x > $2000))', 'Is_Cat(Fluffy) ∧ Is_Pet(Fluffy)', 'Is_Managed_Building(The_Olive_Garden)', '$2000 = Monthly_Rent_Of_The_Olive_Garden', '(Is_Pet_Allowed_In_Building(x) ∧ Is_Security_Deposit_No_More_Than(x, y, $1500)) ↔ Will_Rent_Apartment(Tom, x)', 'Is_More_Than($2000, $1500)']
+Will_Rent_Apartment(Tom, The_Olive_Garden)
+---------------------------
+∃x (Is_Managed_Building(x) ∧ Allow_Pet(x))
+∀x (Is_Managed_Building(x) → Require_Deposit(x))
+'NoneType' object has no attribute 'leaves'
+['∃x (Is_Managed_Building(x) ∧ Allowed_In_Building(Pets, x))', '∀x (Is_Managed_Building(x) → Has_Security_Deposit(Rent_An_Apartment(apartment, x), deposit))', '∀x (Has_Security_Deposit(Rent_An_Apartment(apartment, x), deposit) → (Is_Equal_To_One_Months_Rent(deposit, x) ∨ Has_Security_Deposit(deposit, more))))', 'Is_Cat(Fluffy) ∧ Is_Pet(Cats)', 'Is_Managed_Building(The_Olive_Garden)', 'Is_Equal_To_One_Months_Rent(2000, The_Olive_Garden)', '(Is_Pet(Fluffy) ∧ Allowed_In_Building(Fluffy, x)) ∧ (Has_Security_Deposit(deposit, 1500) → Rent_An_Apartment(Tom, x))', '2000 > 1500']
+∃x (Is_Managed_Building(x) ∧ Allowed_In_Building(Fluffy, x) ∧ Rent_An_Apartment(Tom, x))
+---------------------------
+∃x (Is_Managed_Building(x) ∧ Allowed_In_Building(Pets, x))
+'NoneType' object has no attribute 'leaves'
+['∃x (Is_managed_building(x) ∧ Is_allowed_in(x, True))', '∀x (Is_managed_building(x) → Require_deposit(x))', '∀x ∃y (Require_deposit(x) → Equal_to_one_month_rent(x, y))', 'Is_cat(Fluffy) ∧ Is_pet(Fluffy)', 'Is_managed_building(The_Olive_Garden)', '2000 = Monthly_rent(The_Olive_Garden)', '(Tom_will_rent_apartment_in_The_Olive_Garden  Is_allowed_in(The_Olive_Garden, True)) ∧ Less_than_or_equal_to(The_Olive_Garden, 1500))', '¬Less_than_or_equal_to(Monthly_rent(The_Olive_Garden), 1500)']
+Equal_to_one_month_rent(The_Olive_Garden, Monthly_rent(The_Olive_Garden))
+---------------------------
+∃x (Is_managed_building(x) ∧ Is_allowed_in(x, True))
+∀x (Is_managed_building(x) → Require_deposit(x))
+∀x ∃y (Require_deposit(x) → Equal_to_one_month_rent(x, y))
+Is_cat(Fluffy) ∧ Is_pet(Fluffy)
+Is_managed_building(The_Olive_Garden)
+'NoneType' object has no attribute 'leaves'
+['∀x (Is_man(x) → Is_kind(x) ⊕ Is_evil(x))', '∀x (Is_ugly(x) → ¬Is_handsome(x))', '∀x (Is_evil(x) → Is_ugly(x))', '∀x (Is_gentleman(x) → Is_handsome(x))', '∀x (Is_CEO(x) → Is_gentleman(x))', 'Is_gentleman(Harry)']
+((Is_evil(Harry) ∧ Is_ugly(Harry)) ⊕ ¬(Is_evil(Harry) ∨ Is_ugly(Harry))) → (¬Is_kind(Harry) ∧ ¬Is_CEO(Harry)))
+---------------------------
+∀x (Is_man(x) → Is_kind(x) ⊕ Is_evil(x))
+∀x (Is_ugly(x) → ¬Is_handsome(x))
+∀x (Is_evil(x) → Is_ugly(x))
+∀x (Is_gentleman(x) → Is_handsome(x))
+∀x (Is_CEO(x) → Is_gentleman(x))
+Is_gentleman(Harry)
+['∀x ((Is_Twin(x) ∨ Is_Triplet(x)) → Spend_Time_With_Siblings(x))', '∀x (Same_Age_Siblings(x) → (Is_Twin(x) ∨ Is_Triplet(x)))', '∀x (∃y (Complain(x, y) ∧ Same_Age_Siblings(y)) → Same_Age_Siblings(x))', '¬Live_At_Home(x) → ¬Develop_Bonds(x, Family_Members)', '∀x (Spend_Time_With_Siblings(x) → ¬Live_At_Home(x))', '(Is_Twin(Luke) ∨ Is_Triplet(Luke)) ∧ Develop_Bonds(Luke, Family_Members) ⊕ ¬((Is_Twin(Luke) ∨ Is_Triplet(Luke)) ∨ Develop_Bonds(Luke, Family_Members)))']
+Spend_Time_With_Siblings(Luke)
+---------------------------
+∀x ((Is_Twin(x) ∨ Is_Triplet(x)) → Spend_Time_With_Siblings(x))
+∀x (Same_Age_Siblings(x) → (Is_Twin(x) ∨ Is_Triplet(x)))
+'NoneType' object has no attribute 'leaves'
+['∀x ((Is_Twin(x) ∨ Is_Triplet(x)) → Hang_Out_With_And_Play_With(x, x))', '∀x (Is_Same_Age(x, x) → (Is_Twin(x) ∨ Is_Triplet(x)))', '∀x (Complain_Often(x, x) → Is_Same_Age(x, x))', '¬Live_At_Home_Regularly(x) → ¬Develop_Strong_Bonds_With(x, x)', 'Hang_Out_With_And_Play_With(x, x) → ¬Live_At_Home_Regularly(x)', '(Is_Twin(Luke) ∨ Is_Triplet(Luke)) ∧ Develop_Strong_Bonds_With(Luke, Luke) ⊕ ¬((Is_Twin(Luke) ∨ Is_Triplet(Luke)) ∨ Develop_Strong_Bonds_With(Luke, Luke)))']
+¬(Is_Twin(Luke) ∨ Is_Triplet(Luke)) ∧ ¬Complain_Often(Luke, Luke)
+---------------------------
+∀x ((Is_Twin(x) ∨ Is_Triplet(x)) → Hang_Out_With_And_Play_With(x, x))
+∀x (Is_Same_Age(x, x) → (Is_Twin(x) ∨ Is_Triplet(x)))
+∀x (Complain_Often(x, x) → Is_Same_Age(x, x))
+¬Live_At_Home_Regularly(x) → ¬Develop_Strong_Bonds_With(x, x)
+Hang_Out_With_And_Play_With(x, x) → ¬Live_At_Home_Regularly(x)
+'NoneType' object has no attribute 'leaves'
+['Take_GRE_Test(x) → US_205', '∀x (Prove_Economic_Hardship(x) ∧ Is_GRE_Applicant(x) → Provide_Financial_Aid_To(ETS, x))', "Is_Single_Parent_Family(Tom's_family) ∧ Has_Been_Out_Of_Work_For_More_Than_A_Year(Tom's_dad)"]
+Prove_Economic_Hardship(Tom) ∧ Is_GRE_Applicant(Tom)
+---------------------------
+'NoneType' object has no attribute 'leaves'
+['Costs(GRE_Test, US_205)', '∀x (Prove_Economic_Hardship(x) → Provides_financial_Aid(ETS, x))', 'Live_In_Single_Parent_Family(Tom) ∧ ∃x (Is_Dad_Of(x, Tom) ∧ Been_Out_Of_Work_For_More_Than_A_Year(x))']
+Costs(GRE_Test, y) → (y < US_300)
+---------------------------
+Costs(GRE_Test, US_205)
+∀x (Prove_Economic_Hardship(x) → Provides_financial_Aid(ETS, x))
+'NoneType' object has no attribute 'leaves'
+['∀x (Take_GRE_Test(x) → Pay_US_205(x))', '∃x Is_financial_Aid(x) ∧ ∀y (Prove_Economic_Hardship(y) → Receive(x, y))', '∀x (Have_Difficulty_Caused_By_Too_Little_Money_Or_Few_Resources(x) → Economic_Hardship(x))', 'Is_Single_Parent_Family(Tom) ∧ Is_Out_Of_Work_For_Long_Time(Dad, More_than_one_year)']
+¬∃x (Is_financial_Aid(x) ∧ Available_For_GRE_Test(x))
+---------------------------
+∀x (Take_GRE_Test(x) → Pay_US_205(x))
+'NoneType' object has no attribute 'leaves'
+['(Is_New_Mexico(Picuris_Mountains) ∨ Is_Texas(Picuris_Mountains))', 'Visit(Juan_de_Onate, Picuris_Mountains)', 'Is_Location_Of_Mine(Picuris_Mountains, Harding_Pegmatite_Mine) ∧ Is_Donated(Harding_Pegmatite_Mine)', '¬∃x (Is_Texas(x) ∧ ∃y (Is_Location_Of_Mine(x, y) ∧ Is_Donated(y)))']
+Visit(Juan_de_Onate, x) ∧ Is_New_Mexico(x)
+---------------------------
+(Is_New_Mexico(Picuris_Mountains) ∨ Is_Texas(Picuris_Mountains))
+Visit(Juan_de_Onate, Picuris_Mountains)
+Is_Location_Of_Mine(Picuris_Mountains, Harding_Pegmatite_Mine) ∧ Is_Donated(Harding_Pegmatite_Mine)
+'NoneType' object has no attribute 'leaves'
+['(Is_New_Mexico(Picuris_Mountains) ∨ Is_Texas(Picuris_Mountains)) ∧ Is_Located_In(Harding_Pegmatite_Mine, Picuris_Mountains) ∧ Is_Donated(Harding_Pegmatite_Mine)', 'Is_Visited_By(Picuris_Mountains, Juan_de_Onate)', '¬∃x (Is_Texas(x) ∧ Is_Mountain_Range(x) ∧ ∃y (Is_Located_In(y, x) ∧ Is_Donated(y)))']
+¬Is_New_Mexico(Harding_Pegmatite_Mine)
+---------------------------
+(Is_New_Mexico(Picuris_Mountains) ∨ Is_Texas(Picuris_Mountains)) ∧ Is_Located_In(Harding_Pegmatite_Mine, Picuris_Mountains) ∧ Is_Donated(Harding_Pegmatite_Mine)
+Is_Visited_By(Picuris_Mountains, Juan_de_Onate)
+'NoneType' object has no attribute 'leaves'
+['∀x ∀y (Is_man(x) ∧ Taller_than(x, y) → Can_block_shooting_from(x, y))', 'Is_man(Michael) ∧ ∀z (Is_man(z) → Taller_than(Michael, z))', '∀x ∀y ∀z (Taller_than(x, y) ∧ Taller_than(y, z) → Taller_than(x, z))', 'Is_man(Peter) ∧ Taller_than(Peter, Michael)', '∀x ∀y (Is_man(y) → Can_block_shooting_from(Michael, y))', '¬Can_block_shooting_from(Michael, Windy)', '∀x (Jump_when_shooting(x) → Great_shooter(x))']
+¬∃z (Is_man(z) ∧ Taller_than(Peter, z))
+---------------------------
+∀x ∀y (Is_man(x) ∧ Taller_than(x, y) → Can_block_shooting_from(x, y))
+'NoneType' object has no attribute 'leaves'
+['∀x ∀y (Taller_than(x, y) → Can_block_shooting(x, y))', 'Is_man(Michael) ∧ ∀y (Is_man(y) → Taller_than(Michael, y))', '∀x ∀y ∀z ((Taller_than(x, y) ∧ Taller_than(y, z)) → Taller_than(x, z))', 'Is_man(Peter) ∧ Taller_than(Peter, Michael)', '∀x ∀y (Taller_than(Michael, y) → Can_block_shooting(Michael, y))', '¬Can_block_shooting(Michael, Windy)', '∀x (Can_jump_when_shooting(x) → Is_great_shooter(x))']
+Can_block_shooting(Peter, Windy)
+---------------------------
+∀x ∀y (Taller_than(x, y) → Can_block_shooting(x, y))
+'NoneType' object has no attribute 'leaves'
+['Is_Named_After(Barutin_Cove, Barutin)', 'Is_Located_In(Barutin_Cove, Snow_Island)', '∀x ∃y (Is_Located_In(x, y) ∧ Is_Located_In(y, Antarctica)) → Is_Located_In(x, Antarctica))', 'Is_Part_Of(Snow_Island, South_Shetland_Islands)', 'Is_Part_Of(South_Shetland_Islands, Antarctica)']
+∃x (Is_Located_In(x, Antarctica) ∧ Is_Named_After(x, Barutin))
+---------------------------
+Is_Named_After(Barutin_Cove, Barutin)
+Is_Located_In(Barutin_Cove, Snow_Island)
+'NoneType' object has no attribute 'leaves'
+['Barutin_Cove = Barutin', 'Is_located_in(Barutin_Cove, Snow_Island)', '∃x (x = South_Sheltand_Islands ∧ Is_located_in(Snow_Island, x) ∧ Is_located_in(Greenwich_Island, x) ∧ Is_located_in(Deception_Island, x))', 'Is_located_in(South_Sheltand_Islands, Antarctica)', '∀x ∀y ∀z (Is_located_in(x, y) ∧ Is_located_in(y, z) → Is_located_in(x, z))']
+¬Is_located_in(Barutin, Antarctica)
+---------------------------
+'NoneType' object has no attribute 'leaves'
+['∀x (Can_transport_multiple_passengers(x) → ¬Is_empty(x))', '∀x (Is_airline(x) → Can_transport_multiple_passengers(x))', '∀x (Is_plane(x) → Is_empty(x))', '∀x (Is_Boeing_707(x) → Is_plane(x))', '¬Is_airline(Greyhound) → ¬∃x (Is_Greyhound(x) ∧ Is_plane(x))']
+Is_airline(Greyhound)
+---------------------------
+∀x (Can_transport_multiple_passengers(x) → ¬Is_empty(x))
+∀x (Is_airline(x) → Can_transport_multiple_passengers(x))
+∀x (Is_plane(x) → Is_empty(x))
+∀x (Is_Boeing_707(x) → Is_plane(x))
+'NoneType' object has no attribute 'leaves'
+['∀x (Can_transport_multiple_passengers(x) → ¬Are_empty(x))', '∀x (Is_airline(x) → Can_transport_multiple_passengers(x))', '∀x (Is_plane(x) → Are_empty(x))', '∀x (Is_Boeing_707(x) → Is_plane(x))', '¬Is_airline(Greyhound) → ¬∃x (Are_Greyhound_planes(x))']
+Is_Boeing_707(Greyhound)
+---------------------------
+∀x (Can_transport_multiple_passengers(x) → ¬Are_empty(x))
+∀x (Is_airline(x) → Can_transport_multiple_passengers(x))
+∀x (Is_plane(x) → Are_empty(x))
+∀x (Is_Boeing_707(x) → Is_plane(x))
+'NoneType' object has no attribute 'leaves'
+['∀x (Can_Transport_Multiple_Passengers(x) → ¬Is_Empty(x))', '∀x (Is_Airline(x) → Can_Transport_Multiple_Passengers(x))', '∀x (Is_Plane(x) → Is_Empty(x))', '∀x (Is_Boeing_707(x) → Is_Plane(x))', '¬Is_Airline(Greyhound) → ¬∃y (Is_Greyhound(y) ∧ Is_Plane(y))']
+¬(Is_Greyhound(Boeing_707))
+---------------------------
+∀x (Can_Transport_Multiple_Passengers(x) → ¬Is_Empty(x))
+∀x (Is_Airline(x) → Can_Transport_Multiple_Passengers(x))
+∀x (Is_Plane(x) → Is_Empty(x))
+∀x (Is_Boeing_707(x) → Is_Plane(x))
+'NoneType' object has no attribute 'leaves'
+['∀x (Has_Wedding(x) → Have_At_Least_One_Child(x))', '∀x (Travel_To_Paris_For_Honeymoon(x) → Has_Wedding(x))', '∀x ((Has_Wedding(x) ∧ Occurs_In_July(x)) → Travel_To_Paris_For_Honeymoon(x))', '∃x (Occurs_In_July(x) ∧ Is_Well_Attended(x) ∧ Has_Wedding(x))', '(Have_At_Least_One_Child(John) → ¬Travel_To_Paris_For_Honeymoon(John) ∧ ¬Has_Wedding(John))', '(Is_Well_Attended(x) ∧ Has_Wedding(John)) → (Occurs_In_July(x) ∨ Travel_To_Paris_For_Honeymoon(John)))']
+Have_At_Least_One_Child(John)
+---------------------------
+∀x (Has_Wedding(x) → Have_At_Least_One_Child(x))
+∀x (Travel_To_Paris_For_Honeymoon(x) → Has_Wedding(x))
+∀x ((Has_Wedding(x) ∧ Occurs_In_July(x)) → Travel_To_Paris_For_Honeymoon(x))
+∃x (Occurs_In_July(x) ∧ Is_Well_Attended(x) ∧ Has_Wedding(x))
+(Have_At_Least_One_Child(John) → ¬Travel_To_Paris_For_Honeymoon(John) ∧ ¬Has_Wedding(John))
+'NoneType' object has no attribute 'leaves'
+['∀x (Has_Wedding(x) → Have_At_Least_One_Child(x))', '∀x (Travel_To_Paris_For_Honeymoon(x) → Has_Wedding(x))', '∀x ((Has_Wedding(x) ∧ Occur_In_July(x)) → Travel_To_Paris_For_Honeymoon(x))', '∃x (Occur_In_July(x) ∧ Is_Well_Attended(x))', 'Have_At_Least_One_Child(John) → ¬(Travel_To_Paris_For_Honeymoon(John) ∧ Has_Wedding(John))', '(Is_Well_Attended(x) ∧ Has_Wedding(John)) → (Occur_In_July(x) ∨ Travel_To_Paris_For_Honeymoon(John))']
+¬(Is_Well_Attended(Has_Wedding(John)) ∧ Travel_To_Paris_For_Honeymoon(John))
+---------------------------
+∀x (Has_Wedding(x) → Have_At_Least_One_Child(x))
+∀x (Travel_To_Paris_For_Honeymoon(x) → Has_Wedding(x))
+∀x ((Has_Wedding(x) ∧ Occur_In_July(x)) → Travel_To_Paris_For_Honeymoon(x))
+∃x (Occur_In_July(x) ∧ Is_Well_Attended(x))
+Have_At_Least_One_Child(John) → ¬(Travel_To_Paris_For_Honeymoon(John) ∧ Has_Wedding(John))
+(Is_Well_Attended(x) ∧ Has_Wedding(John)) → (Occur_In_July(x) ∨ Travel_To_Paris_For_Honeymoon(John))
+['∀x (Is_Vampire(x) → Suck(x))', '∀x (Is_Vacuum(x) → Suck(x))', '∃x ∃y (Is_Household_Appliance(x) ∧ ¬Suck(x) ∧ x = y)', 'Space = Vacuum']
+Suck(Space)
+---------------------------
+∀x (Is_Vampire(x) → Suck(x))
+∀x (Is_Vacuum(x) → Suck(x))
+'NoneType' object has no attribute 'leaves'
+['∀x (Plunger(x) → Suck(x))', '∀x (Vacuum(x) → Suck(x))', '∀x (Vampire(x) → Suck(x))', 'Space_is_a_vacuum', 'Is_Household_Appliance(Duster) ∧ ¬Suck(Duster)']
+∀x (Is_Household_Appliance(x) → Suck(x))
+---------------------------
+∀x (Plunger(x) → Suck(x))
+∀x (Vacuum(x) → Suck(x))
+∀x (Vampire(x) → Suck(x))
+'NoneType' object has no attribute 'leaves'
+['∀x (Is_Machine_Learning_Algorithm(x) → (x = Supervised_Learning ∨ x = Unsupervised_Learning ∨ x = Reinforcement_Learning))', '¬Requires_Labelled_Data(Unsupervised_Learning)', 'Is_Trained_With(State_of_the_art_text_summarization_model, Machine_Learning_Algorithm)', '¬Is_Trained_With(State_of_the_art_text_summarization_model, Reinforcement_Learning)', 'Requires_Labelled_Data(Machine_Learning_Algorithm_for_training_text_summarization_model)']
+∃x (Is_Trained_With(State_of_the_art_text_summarization_model, x) ∧ x = Supervised_Learning)
+---------------------------
+'NoneType' object has no attribute 'leaves'
+['∀x (Is_Unsupervised_Learning(x) → ¬Requires_Labelled_Data(x))', 'Is_Machine_Learning_Algorithm(Is_Supervised_Learning(x)) ∧ Is_Machine_Learning_Algorithm(Is_Unsupervised_Learning(x)) ∧ Is_Machine_Learning_Algorithm(Is_Reinforcement_Learning(x))', 'Is_Trained_With(State_of_the_art_text_summarization_model, Machine_learning_algorithm)', '¬Is_Trained_With(State_of_the_art_text_summarization_model, Is_Reinforcement_Learning(x))', 'Requires_Labelled_Data(Is_Machine_Learning_Algorithm_for_training_text_summarization_model)']
+Is_Trained_With(State_of_the_art_text_summarization_model, Is_Unsupervised_Learning(x))
+---------------------------
+∀x (Is_Unsupervised_Learning(x) → ¬Requires_Labelled_Data(x))
+'NoneType' object has no attribute 'leaves'
+['Specialize_In_Translating_Foreign_Literature(New_Vessel_Press)', '∀x (Is_published_by(x, New_Vessel_Press) → Is_book_in_language(x, English))', 'Is_published_by(Neapolitan_Chronicles, New_Vessel_Press)', 'Is_book_translated_from_language(Neapolitan_Chronicles, Italian)', 'Is_published_by(Palace_of_Flies, New_Vessel_Press)']
+∃x (Is_book_translated_from_language(Palace_of_Flies, x) ∧ x = Italian)
+---------------------------
+Specialize_In_Translating_Foreign_Literature(New_Vessel_Press)
+∀x (Is_published_by(x, New_Vessel_Press) → Is_book_in_language(x, English))
+Is_published_by(Neapolitan_Chronicles, New_Vessel_Press)
+Is_book_translated_from_language(Neapolitan_Chronicles, Italian)
+Is_published_by(Palace_of_Flies, New_Vessel_Press)
+['∀x (Own(x, Large_Desktop_Monitor) → Work_At_Home_Regularly_And_Often(x))', '∀x (∃y (Is_Home_Office(y) ∧ Is_Fully_Stocked_Impressive(y) ∧ Own(x, y))) → Own(x, Large_Desktop_Monitor))', '∀x (Work_At_Home_Regularly_And_Often(x) → Spend_Free_Time_Tidying_And_Organizing_Spaces(x))', '∀x (Work_At_Home_Regularly_And_Often(x) → Visit_Office_Supply_Store_Regularly(x))', '∀x (Spend_Free_Time_Tidying_And_Organizing_Spaces(x) → ¬Goes_To_Bed_Late_And_Wake_Up_Every_Day_After_Noon(x))', '(Goes_To_Bed_Late_And_Wake_Up_Every_Day_After_Noon(Remy) ∧ Spend_Free_Time_Tidying_And_Organizing_Spaces(Remy)) ⊕ ¬(Goes_To_Bed_Late_And_Wake_Up_Every_Day_After_Noon(Remy) ∨ Spend_Free_Time_Tidying_And_Organizing_Spaces(Remy))']
+Visit_Office_Supply_Store_Regularly(Remy)
+---------------------------
+∀x (Own(x, Large_Desktop_Monitor) → Work_At_Home_Regularly_And_Often(x))
+'NoneType' object has no attribute 'leaves'
+['∃x (Roses = x ∧ Is_Given_Out_On_TV(x))', '∀x (Is_Given_Out_On_TV(x) → Is_On_The_Bachelor(x))', '∀x (Is_On_The_Bachelor(x) → Portray_Lives_Of_Real_People(x))', '∀x (Portray_Lives_Of_Real_People(x) → Is_Realiy_TV_Show(x))', '¬Is_Realiy_TV_Show(Breaking_Bad)']
+¬Is_Given_Out_On_TV(Breaking_Bad)
+---------------------------
+'NoneType' object has no attribute 'leaves'
+['∃x (Is_on_TV(x) ∧ Give_out_rose(8pm, x) ∧ Is_on_Monday(x))', '∀x (Give_out_rose(x, y) → x = Bachelor)', '∀x (Is_on_TV(x) ∧ Portray_lives_of_real_people(x) → Is_reality_TV_show(x))', '¬Is_reality_TV_show(Breaking_Bad)']
+(Give_out_rose(8pm, Breaking_Bad) → (Is_on_Monday(Breaking_Bad) ∧ Is_at_time(8pm, Breaking_Bad)))
+---------------------------
+∃x (Is_on_TV(x) ∧ Give_out_rose(8pm, x) ∧ Is_on_Monday(x))
+'NoneType' object has no attribute 'leaves'
+['∀x (Is_Deadly_Disease(x) → Is_Low_Survival_Rate(x))', '∀x (Is_Severe_Cancer(x) → Is_Deadly_Disease(x))', 'Is_Bile_Duct_Cancer(Bile_duct_cancer) ∧ Is_Severe_Cancer(Bile_duct_cancer)', '∀x (Is_Cholangiocarcinoma(x) → Is_Bile_Duct_Cancer(x))', '¬∃x (Is_Mild_Flu(x) ∧ Is_Low_Survival_Rate(x))', '(Is_Bile_Duct_Cancer(Colorectal_cancer) ∧ Is_Low_Survival_Rate(Colorectal_cancer)) → ¬Is_Bile_Duct_Cancer(Colorectal_cancer)']
+∃x (Is_Severe_Cancer(x) ∧ x = Colorectal_cancer)
+---------------------------
+∀x (Is_Deadly_Disease(x) → Is_Low_Survival_Rate(x))
+∀x (Is_Severe_Cancer(x) → Is_Deadly_Disease(x))
+Is_Bile_Duct_Cancer(Bile_duct_cancer) ∧ Is_Severe_Cancer(Bile_duct_cancer)
+∀x (Is_Cholangiocarcinoma(x) → Is_Bile_Duct_Cancer(x))
+¬∃x (Is_Mild_Flu(x) ∧ Is_Low_Survival_Rate(x))
+(Is_Bile_Duct_Cancer(Colorectal_cancer) ∧ Is_Low_Survival_Rate(Colorectal_cancer)) → ¬Is_Bile_Duct_Cancer(Colorectal_cancer)
+['Is_Olympic_Games(Olympic_games) ∧ Is_Sporting_Event(Olympic_games)', 'Was_In(Is_Last(Olympic_games), Tokyo)', 'Won_Most_Medals(United_States, Tokyo)']
+Won_Most_Medals(United_States, Is_Last(Olympic_games))
+---------------------------
+Is_Olympic_Games(Olympic_games) ∧ Is_Sporting_Event(Olympic_games)
+'NoneType' object has no attribute 'leaves'
+['∀x (Is_Horse(x) → Has_Hooves(x))', '¬∃x (∃y ((Is_human(y) ∧ Has_Hooves(y))))']
+∃x (Is_Human(x) ∧ Is_Horse(x))
+---------------------------
+∀x (Is_Horse(x) → Has_Hooves(x))
+'NoneType' object has no attribute 'leaves'
+['Flies_to(Susan, LGA)', '¬(x = y)', 'Flies_from(John, LGA)']
+Flies_to(John, LGA)
+---------------------------
+Flies_to(Susan, LGA)
+'NoneType' object has no attribute 'leaves'
+['¬(Is_Podcast(Novel))', '∀x ∀y (Is_Born_In(y, American_City) → Is_American(y))', '∀x ∀y ∀z ((Is_Novel(x) ∧ Is_Written_By(x, y) ∧ Is_Person(z)) → Is_Writer_Of_Novel(y))', 'Is_American(Dani_Shapiro) ∧ Is_Writer_Of_Novel(Dani_Shapiro)', 'Is_Written_By(Family_History, Dani_Shapiro)', 'Is_Novel(Family_History)', 'Is_Podcast(Family_Secrets) ∧ ¬(Family_Secrets = Novel)', 'Is_American_City(Boston)']
+∃x (Is_Written_By(x, Dani_Shapiro) ∧ Is_Novel(x))
+---------------------------
+¬(Is_Podcast(Novel))
+∀x ∀y (Is_Born_In(y, American_City) → Is_American(y))
+∀x ∀y ∀z ((Is_Novel(x) ∧ Is_Written_By(x, y) ∧ Is_Person(z)) → Is_Writer_Of_Novel(y))
+Is_American(Dani_Shapiro) ∧ Is_Writer_Of_Novel(Dani_Shapiro)
+Is_Written_By(Family_History, Dani_Shapiro)
+Is_Novel(Family_History)
+'NoneType' object has no attribute 'leaves'
+['Is_Winner_Of(Steinhauer, du_Maurier_Classic_1992)', 'Participate_In(Steinhauer, du_Maurier_Classic_1992)', '∃x ∃y (On_Leaderboard(x, du_Maurier_Classic_1992) ∧ On_Leaderboard(y, du_Maurier_Classic_1992) ∧ From_Belgium(x) ∧ x ≠ y)', 'From_Belgium(Descampe) ∧ On_Leaderboard(Descampe, du_Maurier_Classic_1992)', '∀x (On_Leaderboard(x, du_Maurier_Classic_1992) → Participate_In(x, du_Maurier_Classic_1992))']
+¬Is_Winner_Of(Steinhauer, du_Maurier_Classic_1992)
+---------------------------
+Is_Winner_Of(Steinhauer, Du_Maurier_Classic_1992)
+Participate_In(Steinhauer, Du_Maurier_Classic_1992)
+'NoneType' object has no attribute 'leaves'
+['Is_Winner_Of(Steinhauer, du_Maurier_Classic_1992)', 'Participated_In(Steinhauer, du_Maurier_Classic_1992)', '∃x (In_Six_Way_Tie_On_Leaderboard(x, du_Maurier_Classic_1992) ∧ Is_From(x, Belgium))', 'Is_From(Descampe, Belgium) ∧ Participated_In(Descampe, du_Maurier_Classic_1992)', '∀x (Participated_In(x, du_Maurier_Classic_1992) ← In_Six_Way_Tie_On_Leaderboard(x, du_Maurier_Classic_1992))']
+In_Six_Way_Tie_On_Leaderboard(Descampe, du_Maurier_Classic_1992)
+---------------------------
+Is_Winner_Of(Steinhauer, Du_Maurier_Classic_1992)
+Participated_In(Steinhauer, Du_Maurier_Classic_1992)
+∃x (In_Six_Way_Tie_On_Leaderboard(x, Du_Maurier_Classic_1992) ∧ Is_From(x, Belgium))
+Is_From(Descampe, Belgium) ∧ Participated_In(Descampe, Du_Maurier_Classic_1992)
+'NoneType' object has no attribute 'leaves'
+['Ailton_Silva = Ailton', 'Is_Footballer(Ailton)', 'Loan_Out(Ailton, Braga)', 'Play_For(Ailton_Silva, Nautico)', 'Nautico = y ∧ Braga = z → Play_For(x, y) ∨ Play_For(x, z)', 'Fluminense = u → Is_Footballer(v) ⊕ Play_For(v, u)']
+¬∃x (Play_For(x, Nautico) ∧ Is_Brazilian(x))
+---------------------------
+'NoneType' object has no attribute 'leaves'
+['(Ailton_Silva = Ailton) ∧ Is_Footballer(Ailton) ∧ Is_Brazilian(Ailton) ∧ Play_For(Ailton, Nautico) ∧ (Year_1995 = 1995)', 'Is_Loaned_Out_To(Ailton, Braga)', 'Play_For(Ailton, Nautico)', '∃x (Nautico = x ∨ Braga = x ∨ Fluminense = x → Is_Football_Club(x))']
+¬Play_For(Ailton_Silva, x)
+---------------------------
+'NoneType' object has no attribute 'leaves'

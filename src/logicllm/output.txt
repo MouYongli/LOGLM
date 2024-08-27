@@ -1,0 +1,220 @@
+Loaded 58 examples.
+∀x (Perform_In_School_Talent_Shows_Often(x) → Attend_And_Very_Engaged_With_School_Events(x))
+∀x (Perform_In_School_Talent_Shows_Often(x) ⊕ Is_Inactive_Disinterested_Member_Of_Community(x))
+∀x (Chaperone_High_School_Dances(x) → Is_Not_Student_Attending_School(x))
+∀x (Is_Inactive_Disinterested_Member_Of_Community(x) → Chaperone_High_School_Dances(x))
+∀x ((Is_Young_Children_Teenagers(x) ∧ Further_Academic_Careers_Educational_Opportunities(x)) → Is_Not_Student_Attending_School(x))
+'NoneType' object has no attribute 'leaves'
+'NoneType' object has no attribute 'leaves'
+Is_Japanese(The_Legend_of_Zelda_Company) ∧ Make_Game(The_Legend_of_Zelda_Company, The_Legend_of_Zelda)
+'NoneType' object has no attribute 'leaves'
+Is_Netflix_Show(Stranger_Things) ∧ Is_Popular(Stranger_Things)
+∀x (Is_Netflix_Show(x) ∧ Is_Popular(x)) → Binge_Watch(Karen, x)
+'NoneType' object has no attribute 'leaves'
+Is_Popular(Stranger_Things)
+'NoneType' object has no attribute 'leaves'
+Is_Capital_Of(Beijing, China)
+Is_Located_In(Beijing, Northern_China)
+Hosted_Event(Beijing, Summer_Olympics_2008)
+∃x (Has_Ranked_Among(x, Best_in_Asia_Pacific_and_world) ∧ Is_University_Of(x))
+'NoneType' object has no attribute 'leaves'
+∀x (Is_GrandSlamChampion(x) ∨ Is_OscarNominatedActor(x))
+∀x (Is_GrandSlamChampion(x) → Is_ProfessionalTennisPlayer(x))
+∀x (Is_OscarNominatedActor(x) → Is_Celebrity(x))
+∀x (Is_ProfessionalTennisPlayer(x) → Is_Athlete(x))
+∀x (Is_Celebrity(x) → Is_WellPaid(x))
+∀x (Is_Athlete(x) → Famous(x))
+'NoneType' object has no attribute 'leaves'
+Is_Music_Piece(Symphony_No_9)
+'NoneType' object has no attribute 'leaves'
+Is_Composer(Beethoven) ∧ Write(Beethoven, Symphony_No_9)
+Is_Music_Piece(Symphony_No_9)
+Premiered(Vienna_Music_Society, Symphony_No_9)
+Is_Orchestra(Vienna_Music_Society)
+Lead(Beethoven, Vienna_Music_Society)
+'NoneType' object has no attribute 'leaves'
+Is_Music_Piece(Symphony_No_9)
+'NoneType' object has no attribute 'leaves'
+∀x (Is_Highly_Ranked_By_Women_Tennis_Association(x) → Is_Active_In_Major_Tennis(x))
+∀x (Lost_To_Iga_Świątek(x) → Is_Highly_Ranked_By_Women_Tennis_Association(x))
+∀x (Is_Female_Tennis_Player_At_Roland_Garros_2022(x) → Lost_To_Iga_Świątek(x))
+'NoneType' object has no attribute 'leaves'
+∀x (Want_Long_Vacation(x) → Love_Most(x, Summer))
+Is_Favorite_Season_Of(Emma, Summer)
+'NoneType' object has no attribute 'leaves'
+∀x (Love_Long_Vacation(x) → Favorite(x, Summer))
+Favorite(Emma, Summer)
+'NoneType' object has no attribute 'leaves'
+∀x (Is_Romance_Language(x) → Is_Indo_European_Language(x))
+∀x ∃y (Is_In(x, y) → Are_Related(x, y))
+Is_Romance_Language(French) ∧ Is_Romance_Language(Spanish)
+Are_Related(German, Spanish)
+'NoneType' object has no attribute 'leaves'
+Is_Striker(Robert_Lewandowski)
+∀x (Is_Striker(x) → Is_Soccer_Player(x))
+Left_Team(Robert_Lewandowski, Bayern_Munchen)
+∀x ∀y (Left_Team(x, y) → ¬Play_For(x, y))
+'NoneType' object has no attribute 'leaves'
+Is_Private_Ivy_League(Yale_University)
+Move_to(Yale_University, New_Haven) ∧ Move_to_in_Year(Yale_University, Year_17_16)
+Has_Endowment_Valued_At(Yale_University, 42_3_Billion)
+Organized_Into_Constituent_Colleges_And_Schools(Yale_University, 27)
+Is_Residential_College(Benjamin_Franklin_College)
+Is_Residential_College(Berkeley_College)
+Is_Residential_College(Branford_College)
+Is_Residential_College(Davenport_College)
+Is_Residential_College(Ezra_Stiles_College)
+Is_Residential_College(Grace_Hopper_College)
+Is_Residential_College(Jonathan_Edwards_College)
+Is_Residential_College(Morse_College)
+Is_Residential_College(Pauli_Murray_College)
+Is_Residential_College(Pierson_College)
+Is_Residential_College(Saybrook_College)
+Is_Residential_College(Silliman_College)
+Is_Residential_College(Timothy_Dwight_College)
+Is_Residential_College(Trumbull_College)
+'NoneType' object has no attribute 'leaves'
+Is_British(Badults) ∧ Star(Members_of_Pappys, Badults) ∧ Pilot_In(Badults, BBC_Three)
+Is_Script_Editor_For(Andrew_Collins, Badults)
+'NoneType' object has no attribute 'leaves'
+∀x (Work_in_student_jobs_on_campus(x) → Need_to_earn_money_to_help_pay_for_college_tuition(x))
+∀x (Order_takeout_frequently_in_college(x) → Work_in_student_jobs_on_campus(x))
+∀x (Order_takeout_frequently_in_college(x) ⊕ Enjoy_dining_hall_meals_and_recipes(x))
+∀x (Enjoy_dining_hall_meals_and_recipes(x) → ¬Is_picky_eater(x))
+∀x (Enjoy_dining_hall_meals_and_recipes(x) → Spend_a_lot_of_time_eating_and_catching_up_with_friends_in_the_campus_dining_halls(x))
+'NoneType' object has no attribute 'leaves'
+∀x (Is_listed_in_Yelp_recommendations(x) → ¬Receive_many_negative_reviews(x))
+∀x (Has_rating_greater_than_9(x) → Is_listed_in_Yelp_recommendations(x))
+'NoneType' object has no attribute 'leaves'
+∀x (Is_superhero_movie(x) → Win(Is_good_guy, Is_bad_guy))
+Is_superhero_movie(The_Surprising_Adventures_of_Sir_Digby_Chicken_Caesar)
+∀x ∀y (Fight(x, y) → Fight(y, x))
+'NoneType' object has no attribute 'leaves'
+'NoneType' object has no attribute 'leaves'
+∃x (Is_Managed_Building(x) ∧ Allow_Pet(x))
+∀x (Is_Managed_Building(x) → Require_Deposit(x))
+'NoneType' object has no attribute 'leaves'
+∃x (Is_Managed_Building(x) ∧ Allowed_In_Building(Pets, x))
+'NoneType' object has no attribute 'leaves'
+∃x (Is_managed_building(x) ∧ Is_allowed_in(x, True))
+∀x (Is_managed_building(x) → Require_deposit(x))
+∀x ∃y (Require_deposit(x) → Equal_to_one_month_rent(x, y))
+Is_cat(Fluffy) ∧ Is_pet(Fluffy)
+Is_managed_building(The_Olive_Garden)
+'NoneType' object has no attribute 'leaves'
+∀x (Is_man(x) → Is_kind(x) ⊕ Is_evil(x))
+∀x (Is_ugly(x) → ¬Is_handsome(x))
+∀x (Is_evil(x) → Is_ugly(x))
+∀x (Is_gentleman(x) → Is_handsome(x))
+∀x (Is_CEO(x) → Is_gentleman(x))
+Is_gentleman(Harry)
+'NoneType' object has no attribute 'leaves'
+∀x ((Is_Twin(x) ∨ Is_Triplet(x)) → Spend_Time_With_Siblings(x))
+∀x (Same_Age_Siblings(x) → (Is_Twin(x) ∨ Is_Triplet(x)))
+'NoneType' object has no attribute 'leaves'
+∀x ((Is_Twin(x) ∨ Is_Triplet(x)) → Hang_Out_With_And_Play_With(x, x))
+∀x (Is_Same_Age(x, x) → (Is_Twin(x) ∨ Is_Triplet(x)))
+∀x (Complain_Often(x, x) → Is_Same_Age(x, x))
+¬Live_At_Home_Regularly(x) → ¬Develop_Strong_Bonds_With(x, x)
+Hang_Out_With_And_Play_With(x, x) → ¬Live_At_Home_Regularly(x)
+'NoneType' object has no attribute 'leaves'
+'NoneType' object has no attribute 'leaves'
+Costs(GRE_Test, US_205)
+∀x (Prove_Economic_Hardship(x) → Provides_financial_Aid(ETS, x))
+'NoneType' object has no attribute 'leaves'
+∀x (Take_GRE_Test(x) → Pay_US_205(x))
+'NoneType' object has no attribute 'leaves'
+(Is_New_Mexico(Picuris_Mountains) ∨ Is_Texas(Picuris_Mountains))
+Visit(Juan_de_Onate, Picuris_Mountains)
+Is_Location_Of_Mine(Picuris_Mountains, Harding_Pegmatite_Mine) ∧ Is_Donated(Harding_Pegmatite_Mine)
+'NoneType' object has no attribute 'leaves'
+(Is_New_Mexico(Picuris_Mountains) ∨ Is_Texas(Picuris_Mountains)) ∧ Is_Located_In(Harding_Pegmatite_Mine, Picuris_Mountains) ∧ Is_Donated(Harding_Pegmatite_Mine)
+Is_Visited_By(Picuris_Mountains, Juan_de_Onate)
+'NoneType' object has no attribute 'leaves'
+∀x ∀y (Is_man(x) ∧ Taller_than(x, y) → Can_block_shooting_from(x, y))
+'NoneType' object has no attribute 'leaves'
+∀x ∀y (Taller_than(x, y) → Can_block_shooting(x, y))
+'NoneType' object has no attribute 'leaves'
+Is_Named_After(Barutin_Cove, Barutin)
+Is_Located_In(Barutin_Cove, Snow_Island)
+'NoneType' object has no attribute 'leaves'
+'NoneType' object has no attribute 'leaves'
+∀x (Can_transport_multiple_passengers(x) → ¬Is_empty(x))
+∀x (Is_airline(x) → Can_transport_multiple_passengers(x))
+∀x (Is_plane(x) → Is_empty(x))
+∀x (Is_Boeing_707(x) → Is_plane(x))
+'NoneType' object has no attribute 'leaves'
+∀x (Can_transport_multiple_passengers(x) → ¬Are_empty(x))
+∀x (Is_airline(x) → Can_transport_multiple_passengers(x))
+∀x (Is_plane(x) → Are_empty(x))
+∀x (Is_Boeing_707(x) → Is_plane(x))
+'NoneType' object has no attribute 'leaves'
+∀x (Can_Transport_Multiple_Passengers(x) → ¬Is_Empty(x))
+∀x (Is_Airline(x) → Can_Transport_Multiple_Passengers(x))
+∀x (Is_Plane(x) → Is_Empty(x))
+∀x (Is_Boeing_707(x) → Is_Plane(x))
+'NoneType' object has no attribute 'leaves'
+∀x (Has_Wedding(x) → Have_At_Least_One_Child(x))
+∀x (Travel_To_Paris_For_Honeymoon(x) → Has_Wedding(x))
+∀x ((Has_Wedding(x) ∧ Occurs_In_July(x)) → Travel_To_Paris_For_Honeymoon(x))
+∃x (Occurs_In_July(x) ∧ Is_Well_Attended(x) ∧ Has_Wedding(x))
+(Have_At_Least_One_Child(John) → ¬Travel_To_Paris_For_Honeymoon(John) ∧ ¬Has_Wedding(John))
+'NoneType' object has no attribute 'leaves'
+∀x (Has_Wedding(x) → Have_At_Least_One_Child(x))
+∀x (Travel_To_Paris_For_Honeymoon(x) → Has_Wedding(x))
+∀x ((Has_Wedding(x) ∧ Occur_In_July(x)) → Travel_To_Paris_For_Honeymoon(x))
+∃x (Occur_In_July(x) ∧ Is_Well_Attended(x))
+Have_At_Least_One_Child(John) → ¬(Travel_To_Paris_For_Honeymoon(John) ∧ Has_Wedding(John))
+(Is_Well_Attended(x) ∧ Has_Wedding(John)) → (Occur_In_July(x) ∨ Travel_To_Paris_For_Honeymoon(John))
+'NoneType' object has no attribute 'leaves'
+∀x (Is_Vampire(x) → Suck(x))
+∀x (Is_Vacuum(x) → Suck(x))
+'NoneType' object has no attribute 'leaves'
+∀x (Plunger(x) → Suck(x))
+∀x (Vacuum(x) → Suck(x))
+∀x (Vampire(x) → Suck(x))
+'NoneType' object has no attribute 'leaves'
+'NoneType' object has no attribute 'leaves'
+∀x (Is_Unsupervised_Learning(x) → ¬Requires_Labelled_Data(x))
+'NoneType' object has no attribute 'leaves'
+Specialize_In_Translating_Foreign_Literature(New_Vessel_Press)
+∀x (Is_published_by(x, New_Vessel_Press) → Is_book_in_language(x, English))
+Is_published_by(Neapolitan_Chronicles, New_Vessel_Press)
+Is_book_translated_from_language(Neapolitan_Chronicles, Italian)
+Is_published_by(Palace_of_Flies, New_Vessel_Press)
+'NoneType' object has no attribute 'leaves'
+∀x (Own(x, Large_Desktop_Monitor) → Work_At_Home_Regularly_And_Often(x))
+'NoneType' object has no attribute 'leaves'
+'NoneType' object has no attribute 'leaves'
+∃x (Is_on_TV(x) ∧ Give_out_rose(8pm, x) ∧ Is_on_Monday(x))
+'NoneType' object has no attribute 'leaves'
+∀x (Is_Deadly_Disease(x) → Is_Low_Survival_Rate(x))
+∀x (Is_Severe_Cancer(x) → Is_Deadly_Disease(x))
+Is_Bile_Duct_Cancer(Bile_duct_cancer) ∧ Is_Severe_Cancer(Bile_duct_cancer)
+∀x (Is_Cholangiocarcinoma(x) → Is_Bile_Duct_Cancer(x))
+¬∃x (Is_Mild_Flu(x) ∧ Is_Low_Survival_Rate(x))
+(Is_Bile_Duct_Cancer(Colorectal_cancer) ∧ Is_Low_Survival_Rate(Colorectal_cancer)) → ¬Is_Bile_Duct_Cancer(Colorectal_cancer)
+'NoneType' object has no attribute 'leaves'
+Is_Olympic_Games(Olympic_games) ∧ Is_Sporting_Event(Olympic_games)
+'NoneType' object has no attribute 'leaves'
+∀x (Is_Horse(x) → Has_Hooves(x))
+'NoneType' object has no attribute 'leaves'
+Flies_to(Susan, LGA)
+'NoneType' object has no attribute 'leaves'
+¬(Is_Podcast(Novel))
+∀x ∀y (Is_Born_In(y, American_City) → Is_American(y))
+∀x ∀y ∀z ((Is_Novel(x) ∧ Is_Written_By(x, y) ∧ Is_Person(z)) → Is_Writer_Of_Novel(y))
+Is_American(Dani_Shapiro) ∧ Is_Writer_Of_Novel(Dani_Shapiro)
+Is_Written_By(Family_History, Dani_Shapiro)
+Is_Novel(Family_History)
+'NoneType' object has no attribute 'leaves'
+Is_Winner_Of(Steinhauer, Du_Maurier_Classic_1992)
+Participate_In(Steinhauer, Du_Maurier_Classic_1992)
+'NoneType' object has no attribute 'leaves'
+Is_Winner_Of(Steinhauer, Du_Maurier_Classic_1992)
+Participated_In(Steinhauer, Du_Maurier_Classic_1992)
+∃x (In_Six_Way_Tie_On_Leaderboard(x, Du_Maurier_Classic_1992) ∧ Is_From(x, Belgium))
+Is_From(Descampe, Belgium) ∧ Participated_In(Descampe, Du_Maurier_Classic_1992)
+'NoneType' object has no attribute 'leaves'
+'NoneType' object has no attribute 'leaves'
+'NoneType' object has no attribute 'leaves'
