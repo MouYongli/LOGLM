@@ -78,14 +78,15 @@ class LogicInferenceEngine:
             self.prover9_premises = []
             for premise in self.logic_premises:
                 fol_rule = FOL_Formula(premise)
-                print(fol_rule)
+                # print(fol_rule)
                 if fol_rule.is_valid == False:
+                    print(premises)
                     return False
                 prover9_rule = Prover9_FOL_Formula(fol_rule)
                 self.prover9_premises.append(prover9_rule.formula)
 
             fol_conclusion = FOL_Formula(self.logic_conclusion)
-            print(fol_conclusion)
+            # print(fol_conclusion)
 
             if fol_conclusion.is_valid == False:
                 return False

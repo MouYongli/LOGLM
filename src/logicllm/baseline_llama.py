@@ -112,12 +112,11 @@ class LLaMA_Reasoning_Graph_Baseline:
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_path', type=str, default=data_path)
-    parser.add_argument('--dataset_name', type=str, default="ProntoQA")
+    parser.add_argument('--dataset_name', type=str)
     parser.add_argument('--split', type=str, default='dev')
     parser.add_argument('--save_path', type=str, default=results_path)
     parser.add_argument('--demonstration_path', type=str, default=prompt_path)
     parser.add_argument('--model_name', type=str, default='llama3:8b')
-    parser.add_argument('--stop_words', type=str, default='------')
     parser.add_argument('--mode', type=str, default="CoT")
     parser.add_argument('--max_new_tokens', type=int, default = 4096)
     args = parser.parse_args()
